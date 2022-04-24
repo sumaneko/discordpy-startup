@@ -104,7 +104,7 @@ async def test(ctx):
 	#瀕死じゃないなら喋る
 	if bot_chan.dying_hp < bot_chan.get_hp():
 		pass
-		await ctx.send("デプロイされてます")
+		await ctx.send("今はテストはないですね")
 		
 @bot.command()
 async def harapan(ctx):
