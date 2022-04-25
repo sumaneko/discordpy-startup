@@ -104,7 +104,7 @@ def get_calling_bot(m):
 			]
 			return get_quotes(quotes)
 
-		if "ベロチュー" in m.content or "キス" in m.content:
+		if "ベロチュー" in m.content or ("キス" in m.content "テキスト" not in m.content):
 			quotes = [
 				[100, "歯磨きとデンタルフロスをちゃんと毎日してる人じゃないと、キスなんてしてあげませんからね"],
 				[100, "キスはけっこう特別なモノなので・・・無理やりはちょっと・・・"],

@@ -89,7 +89,7 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
-	if ("すじ" in m.content and "あらすじ" not in m.content):
+	if "すじ" in m.content and "あらすじ" not in m.content:
 		quotes = [
 			[100, "すじ！"],
 			[100, "すじは単線ならモザイクいらないって聞きますよ"],
@@ -139,6 +139,14 @@ def get_shimoneta(m):
 			[50, "<:oppaioppai:806106303025643531> "],
 			[100, "私もおっぱいにはちょっと自信があるんですよ！"],
 			[100, f"{name}さんっておっぱい大好きですよね"]
+		]
+		return get_quotes(quotes)
+
+	if "ふたなり" in m.content or "両性具有" in m.content:
+		quotes = [
+			[100, "おちんちんもおまんこも付いてるのはちょっと欲張りすぎやしませんか？"],
+			[100, "タマタマが付いてるタイプはおまんこが隠れちゃうからちょっと嫌です・・・"],
+			[100, "何か便利な魔法とかお薬で生えちゃうんですか？おちんちん！"]
 		]
 		return get_quotes(quotes)
 
