@@ -166,12 +166,21 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
-	if "ちんこ" in m.content or "チンコ" in m.content or "チンチン" in m.content or "ちんちん" in m.content or "チンポ" in m.content or "ちんぽ" in m.content:
+	if "ちんこ" in m.content or "チンコ" in m.content or "チンチン" in m.content or "ちんちん" in m.content or "チンポ" in m.content or "ちんぽ" in m.content or "ペニス" in m.content:
 		quotes = [
 			[100, "え、おちんちん・・・？"],
 			[100, "ちーんちん"],
+			[100, "おちんちんの長さは定規を恥骨に押し付けて測るんですよ、知ってました？"],
 			[50, "<:standup:805846231851073647> "],
 			[100, "ち・・・チンポ"]
+		]
+		return get_quotes(quotes)
+
+	if "ペニス" in m.content:
+		quotes = [
+			[100, "つまりおちんちんのことですよね？"],
+			[100, "おペニス・・・・・・語呂が悪いな"],
+			[100, "おちんちんの長さは定規を恥骨に押し付けて測るんですよ、知ってました？"]
 		]
 		return get_quotes(quotes)
 
