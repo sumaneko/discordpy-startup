@@ -111,6 +111,7 @@ async def test(ctx):
 @bot.command()
 async def test2(ctx):
 	await bot.change_presence(activity=None)
+	await ctx.send("テスト中2")
 
 		
 @bot.command()
