@@ -107,6 +107,7 @@ async def test(ctx):
 		pass
 		await ctx.send("テスト中")
 		#await ctx.send("今はテストはないですね")
+		#
 	else:
 		await bot.change_presence(activity=previous_status)
 		
