@@ -101,10 +101,12 @@ async def sex(ctx):
 		await ctx.send("せっくす！")
 @bot.command()
 async def test(ctx):
+	await bot.change_presence(activity=discord.Game(name="TEST"))
 	#瀕死じゃないなら喋る
 	if bot_chan.dying_hp < bot_chan.get_hp():
 		pass
-		await ctx.send("今はテストはないですね")
+		await ctx.send("テスト中")
+		#await ctx.send("今はテストはないですね")
 		
 @bot.command()
 async def harapan(ctx):
