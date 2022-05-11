@@ -108,7 +108,7 @@ async def test(ctx):
 		await ctx.send("テスト中")
 		#await ctx.send("今はテストはないですね")
 	else:
-		await bot.change_presence(activity=None)
+		await bot.change_presence(None)
 		
 @bot.command()
 async def harapan(ctx):
