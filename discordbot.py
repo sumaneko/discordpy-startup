@@ -104,19 +104,11 @@ async def sex(ctx):
 		await ctx.send("せっくす！")
 @bot.command()
 async def test(ctx):
-	await bot.change_presence(activity=discord.Game(name="TEST"))
 	#瀕死じゃないなら喋る
 	if bot_chan.dying_hp < bot_chan.get_hp():
 		pass
-		await ctx.send("テスト中")
-		#await ctx.send("今はテストはないですね")
+		await ctx.send("今はテストはないですね")
 
-@bot.command()
-async def test2(ctx):
-	await bot.change_presence(activity=None)
-	await ctx.send("テスト中2")
-
-		
 @bot.command()
 async def harapan(ctx):
 	global prev_time
@@ -203,13 +195,14 @@ async def on_message(message):
 		playing_turn -= 1
 		#プレイ中の更新
 		if playing_turn < 0:
-			playing_turn = random.randint(10,60)
+			playing_turn = random.randint(1,3)
 			await bot.change_presence(activity=discord.Game(name=get_playchu()))
 	else:
 		#瀕死になったらやめる
 		playing_turn = 0
 		await bot.change_presence(activity=None)
 
+	#発言処理パート
 	#botならスルー
 	if message.author.bot:
 		pass
