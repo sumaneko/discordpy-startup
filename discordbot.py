@@ -35,6 +35,8 @@ token = os.environ['DISCORD_BOT_TOKEN']
 ct = 60
 #BOT前回の発言イベント時間（初期ct秒黙るためあらかじめ引く）
 prev_time = datetime.datetime.now() - datetime.timedelta(seconds=ct)
+#プレイ中のターン数
+playing_turn = 0
 
 #ボットちゃん
 bot_chan = RyonageBot()
@@ -193,6 +195,17 @@ async def okiro(ctx):
 #発言に反応する
 @bot.event
 async def on_message(message):
+	#プレイ中を処理する
+	global playing_turn
+	if bot_chan.dying_hp < bot_chan.get_hp():
+		playing_turn -= 1
+		#プレイ中の更新
+		if playing_turn < 0:
+			playing_turn = random.randInt(10,60)
+			await bot.change_presence(activity=discord.Game(name="TEST"))
+	else:
+		await bot.change_presence(activity=None)
+
 	#botならスルー
 	if message.author.bot:
 		pass
