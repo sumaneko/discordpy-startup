@@ -18,6 +18,7 @@ from quotes.nadenade import get_nadenade
 from quotes.morase import get_morase
 from quotes.omikuji import get_omikuji
 from quotes.luckyitem import get_lucky
+from quotes.playchu import get_playchu
 from quotes.syabette import get_syabette
 from quotes.momimomi import get_momimomi
 from quotes.feint import get_feint
@@ -197,14 +198,16 @@ async def okiro(ctx):
 async def on_message(message):
 	#プレイ中を処理する
 	global playing_turn
+	#健康ならプレイ中
 	if bot_chan.dying_hp < bot_chan.get_hp():
 		playing_turn -= 1
 		#プレイ中の更新
 		if playing_turn < 0:
 			playing_turn = random.randint(10,60)
-			print(playing_turn)
-			await bot.change_presence(activity=discord.Game(name="TEST"))
+			await bot.change_presence(activity=discord.Game(name=get_playchu()))
 	else:
+		#瀕死になったらやめる
+		playing_turn = 0
 		await bot.change_presence(activity=None)
 
 	#botならスルー
