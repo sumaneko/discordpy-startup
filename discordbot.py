@@ -195,7 +195,7 @@ async def on_message(message):
 		playing_turn -= 1
 		#プレイ中の更新
 		if playing_turn < 0:
-			playing_turn = random.randint(1,3)
+			playing_turn = random.randint(10,60)
 			await bot.change_presence(activity=discord.Game(name=get_playchu()))
 	else:
 		#瀕死になったらやめる
