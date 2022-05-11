@@ -201,7 +201,8 @@ async def on_message(message):
 		playing_turn -= 1
 		#プレイ中の更新
 		if playing_turn < 0:
-			playing_turn = random.randInt(10,60)
+			playing_turn = random.randint(10,60)
+			print(playing_turn)
 			await bot.change_presence(activity=discord.Game(name="TEST"))
 	else:
 		await bot.change_presence(activity=None)
