@@ -266,6 +266,15 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
+	if "パンツ" in m.content:
+		quotes = [
+			[100, f"{name}さんは何色のおパンツが好きですか？"],
+			[100, "冷静に考えると、たった1枚の布でお股を隠してるのってエッチですよね・・・？"],
+			[100, "ノーパン健康法ってあながち嘘じゃないらしいですよ"],
+			[100, "尻尾がある女の子のパンツって、それぞれ工夫がしてあってかわいいんですよ"]
+		]
+		return get_quotes(quotes)
+
 	if "ドM" in m.content or ("マゾ" in m.content and "アマゾン" not in m.content):
 		quotes = [
 			[100, f"{name}さんはドMなんですか？"],
