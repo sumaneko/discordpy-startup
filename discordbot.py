@@ -23,6 +23,7 @@ from quotes.syabette import get_syabette
 from quotes.momimomi import get_momimomi
 from quotes.feint import get_feint
 from quotes.kubishime import get_kubishime
+from quotes.penpen import get_penpen
 
 #デフォのintentではmemberにアクセスできないので、ここでTrueに（app画面からのserver members intent設定も必要）
 inte = discord.Intents.default()
@@ -136,6 +137,13 @@ async def kubishime(ctx):
 	#首絞めでCT延長
 	prev_time = datetime.datetime.now() + datetime.timedelta(minutes=10)
 	await ctx.send(get_kubishime(bot_chan, ctx.message))
+
+@bot.command()
+async def penpen(ctx):
+	global prev_time
+	#お尻ペンペンでCT延長
+	prev_time = datetime.datetime.now() + datetime.timedelta(minutes=5)
+	await ctx.send(get_penpen(bot_chan, ctx.message))
 
 @bot.command()
 async def feint(ctx):

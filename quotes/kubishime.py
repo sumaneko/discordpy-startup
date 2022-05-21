@@ -30,9 +30,8 @@ def get_kubishime(bot, m):
 			]
 	
 	l = get_quotes_with_damage(quotes)
-	#回避があるのでダメージで場合分け
-	if 0 < l[1]:
-		sikko = get_omorashi(bot, 20)
+	#ダメージ前しっこ
+	sikko = get_omorashi(bot, 20)
 	#おしっこ判定後にダメージ
 	hp = bot.damage(l[1])
 	
