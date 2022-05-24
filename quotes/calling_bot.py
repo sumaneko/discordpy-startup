@@ -134,6 +134,14 @@ def get_calling_bot(m):
 			]
 			return get_quotes(quotes)
 
+		if "オナニー" in m.content or "アナニー" in m.content or "クリオナ" in m.content:
+			quotes = [
+				[100, "公衆の面前でオナニーなんかしませんよ！"],
+				[100, "まさか私をおかずにするつもりですか！？"],
+				[100, "しないこともないですけど・・・今はやりませんよ！"]
+			]
+			return get_quotes(quotes)
+
 		if "好き" in m.content or "愛してる" in m.content:
 			quotes = [
 				[100, "えっ・・・やだ、恥ずかしい・・・"],
