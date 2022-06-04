@@ -44,29 +44,5 @@ def get_erabe(bot, m, *args):
 		for choice in choices:
 			quotes.append([100, choice])
 
-		return get_quotes(pre) + get_quotes(quotes) + get_quotes(suf)
+		return get_quotes(pre) + "「" + get_quotes(quotes) + "」" + get_quotes(suf)
 	return
-
-"""
-
-		text = vote_text_prefix + choices.pop(0)
-		if len(choices) <= 0:
-			#マルバツ
-			vote = await ctx.send(text)
-			for emoji in vote_emoji_on_no_choice:
-				await vote.add_reaction(emoji)
-		else:
-			for index in range(len(commands)):
-				if index < len(vote_emoji_on_some_choice):
-					text += "\n" + vote_emoji_on_some_choice[index] + ":" + commands[index]
-				else:
-					text += "\n" + vote_text_choice_overflow_message
-					break
-			vote = await ctx.send(text)
-			for index in range(len(commands)):
-				if index < len(vote_emoji_on_some_choice):
-					await vote.add_reaction(vote_emoji_on_some_choice[index])
-
-	return choices[0] + choices[1]
-	#return pre + get_quotes(quotes) + suf
-"""
