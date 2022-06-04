@@ -15,7 +15,6 @@ def get_erabe(bot, m, *args):
 	else:
 		#元気の時
 		choices = list(args)
-		quotes = [[]]
 
 		if len(choices) <= 0:
 			return "えっ、選択肢が無いです・・・"
