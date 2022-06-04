@@ -23,7 +23,7 @@ def get_erabe(bot, m, *args):
 			return choices[0] + "しか選べないじゃないですか！"
 
 		for choice in choices:
-			qoutes.append([100, choice])
+			quotes.append([100, choice])
 
 	return get_quotes(quotes)
 
