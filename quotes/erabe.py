@@ -23,9 +23,8 @@ def get_erabe(bot, m, *args):
 		if len(choices) == 1:
 			return choices[0] + "しか選べないじゃないですか！"
 
-		for i in choices:
-			tmp = [100, choices[i]]
-			qoutes.append(tmp)
+		for choice in choices:
+			qoutes.append([100, choice])
 
 	return get_quotes(quotes)
 
