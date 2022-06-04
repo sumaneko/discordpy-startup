@@ -17,14 +17,15 @@ def get_erabe(bot, m, *args):
 		choices = list(args)
 		quotes = [[]]
 
-		if len(choices) < 0:
+		if len(choices) <= 0:
 			return "えっ、選択肢が無いです・・・"
 
 		if len(choices) == 1:
 			return choices[0] + "しか選べないじゃないですか！"
 
 		for i in choices:
-			qoutes.append([100, choices[i]])
+			tmp = [100, choices[i]]
+			qoutes.append(tmp)
 
 	return get_quotes(quotes)
 
