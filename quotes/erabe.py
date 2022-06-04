@@ -22,6 +22,8 @@ def get_erabe(bot, m, *args):
 		if len(choices) == 1:
 			return choices[0] + "しか選べないじゃないですか！"
 
+		#中身をquotesにつっこんでいく
+		quotes = list(list()))
 		for choice in choices:
 			quotes.append([100, choice])
 
