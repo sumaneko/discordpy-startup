@@ -8,9 +8,9 @@ def get_erabe(bot, m, *args):
 	if  bot.get_hp() <= bot.dying_hp:
 		#瀕死の時
 		quotes = [
-			[100 , "知りま、せん・・・そんなの・・・"],
-			[100 , f"私、を・・・虐める{name}さんに・・・ラッキーアイテムなん、て・・・無いです・・・"],
-			[100 , "私が欲しい、ですよ・・・そんなの・・・"]
+			[100 , "今それどこ、ろじゃ・・・ないです・・・"],
+			[100 , "勝手に・・・やっててくだ・・・さい・・・"],
+			[100 , "選べ・・・と言われ・・・ても・・・"]
 			]
 	else:
 		#元気の時
@@ -23,8 +23,9 @@ def get_erabe(bot, m, *args):
 		if len(choices) == 1:
 			return choices[0] + "しか選べないじゃないですか！"
 
-		for i in range(len(choices)):
+		for i in choices:
 			qoutes.append([100, choices[i]])
+
 	return get_quotes(quotes)
 
 """
