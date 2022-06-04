@@ -196,8 +196,7 @@ async def okiro(ctx):
 
 @bot.command()
 async def erabe(ctx, *args):
-	choices = list(args)
-	await ctx.send(get_erabe(bot_chan, ctx.message, choices))
+	await ctx.send(get_erabe(bot_chan, ctx.message, *args))
 
 
 #発言に反応する
