@@ -5,7 +5,6 @@ def get_erabe(bot, m, *args):
     suf = ""
     name = m.author.name if m.author.nick is None else m.author.nick
 
-    #元気状態なら
     if  bot.get_hp() <= bot.dying_hp:
         #瀕死の時
         quotes = [
@@ -14,7 +13,8 @@ def get_erabe(bot, m, *args):
             [100 , "私が欲しい、ですよ・・・そんなの・・・"]
             ]
     else:
+        #元気の時
         choices = list(args)
 
-     return choices[0], choices[1]   
+     return choices[0] + choices[1]   
     #return pre + get_quotes(quotes) + suf
