@@ -35,7 +35,7 @@ def get_dice(bot, m, *arg):
 
 	t = re.split("(d|D)", content.group())
 
-	print("aaa")
+	print(t)
 
 	#振る回数
 	num = t[0]
