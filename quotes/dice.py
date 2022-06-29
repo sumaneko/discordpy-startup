@@ -13,7 +13,7 @@ def get_dice(bot, m, arg):
 		]
 		return get_quotes(quotes)
 
-	pattern = "^\d*(d|D)\d*$"
+	pattern = "^\d+(d|D)\d+$"
 
 	content = re.match(pattern, arg)
 
