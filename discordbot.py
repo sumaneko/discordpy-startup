@@ -200,8 +200,8 @@ async def erabe(ctx, *args):
 	await ctx.send(get_erabe(bot_chan, ctx.message, *args))
 
 @bot.command()
-async def dice(ctx, arg):
-	await ctx.send(get_dice(bot_chan, ctx.message, arg))
+async def dice(ctx, *arg):
+	await ctx.send(get_dice(bot_chan, ctx.message, *arg))
 
 
 #発言に反応する
