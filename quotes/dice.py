@@ -45,15 +45,17 @@ def get_dice(bot, m, *arg):
 	r_text = ""
 	#合計
 	d_sum = 0
-
+	print("0")
 	#最初の1回はカンマつかない
 	result = random.randint(1, roll)
 	d_sum += result
 	r_text += result
+	print("1")
 	for i in range(num-1):
 		r_text += "、"
 		result += random.randint(1, roll)
 		d_sum += result
 		r_text += result
+		print("2")
 
 	return f"{r_text}だったので{d_sum}です！"
