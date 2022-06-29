@@ -1,6 +1,7 @@
 from mylib.mymodule import get_quotes
 from mymodule.ryonage_bot import RyonageBot
 import re
+import random
 def get_dice(bot, m, *arg):
 	name = m.author.name if m.author.nick is None else m.author.nick
 	#元気状態なら
@@ -33,7 +34,26 @@ def get_dice(bot, m, *arg):
 		return get_quotes(miss_quotes)
 
 	t = re.split("(d|D)", content.group())
-#	return t
-	return t[0] + "と" + t[1] + "と" + t[2] + "です"
 
-	return get_quotes(quotes)
+	#振る回数
+	num = int(t[0])
+	#賽の目
+	roll = int(t[2])
+	#出た目
+	result = 0
+	#出た目の羅列
+	r_text = ""
+	#合計
+	d_sum = 0
+
+	#最初の1回はカンマつかない
+	result = random.randint(1, roll)
+	d_sum += result
+	r_text += result
+	for i in range(num-1):
+		r_text += "、"
+		result += random.randint(1, roll)
+		d_sum += result
+		r_text += result
+
+	return f"{r_text}だったので{d_sum}です！"
