@@ -25,6 +25,7 @@ from quotes.feint import get_feint
 from quotes.kubishime import get_kubishime
 from quotes.penpen import get_penpen
 from quotes.erabe import get_erabe
+from quotes.dice import get_dice
 
 #デフォのintentではmemberにアクセスできないので、ここでTrueに（app画面からのserver members intent設定も必要）
 inte = discord.Intents.default()
@@ -197,6 +198,10 @@ async def okiro(ctx):
 @bot.command()
 async def erabe(ctx, *args):
 	await ctx.send(get_erabe(bot_chan, ctx.message, *args))
+
+@bot.command()
+async def dice(ctx, arg):
+	await ctx.send(get_erabe(bot_chan, ctx.message, arg))
 
 
 #発言に反応する
