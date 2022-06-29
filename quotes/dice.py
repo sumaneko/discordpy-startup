@@ -18,7 +18,7 @@ def get_dice(bot, m, arg):
 	content = re.match(pattern, arg)
 
 	if content:
-		return content
+		return content.group(1)
 	else:
 		return "マッチしてないです"
 
