@@ -18,7 +18,7 @@ def get_dice(bot, m, *arg):
 		  [100 , "フォーマットは「数字d数字」か「数字D数字」ですよ？"],
 		  [100 , "「数字d数字」か「数字D数字」で入力してください～"],
 		]
-	#引数がない
+	#引数の数がおかしい
 	if len(list(arg)) != 1:
 		return get_quotes(miss_quotes)
 
@@ -30,8 +30,7 @@ def get_dice(bot, m, *arg):
 	if content is None:
 		return get_quotes(miss_quotes)
 
-	t = content.group().split("(d|D)")
-	return t
-#	return t[0] + "と" + t[1] + "と" + t[2] + "です"
+	t = re.split("(d|D)", content.group())
+	return t[0] + "と" + t[1] + "と" + t[2] + "です"
 
 	return get_quotes(quotes)
