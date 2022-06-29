@@ -31,6 +31,7 @@ def get_dice(bot, m, *arg):
 		return get_quotes(miss_quotes)
 
 	t = re.split("(d|D)", content.group())
-	return t[0] + "と" + t[1] + "と" + t[2] + "です"
+	return t
+#	return t[0] + "と" + t[1] + "と" + t[2] + "です"
 
 	return get_quotes(quotes)
