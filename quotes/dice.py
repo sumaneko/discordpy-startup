@@ -35,14 +35,10 @@ def get_dice(bot, m, *arg):
 
 	t = re.split("(d|D)", content.group())
 
-	print(t[0]+t[1]+t[2])
-
 	#振る回数
 	num = t[0]
 	#賽の目
-	roll = t[2]
-	ptinrt(t[2])
-	ptinr(roll)
+	d_roll = t[2]
 	#出た目
 	result = 0
 	#出た目の羅列
@@ -51,13 +47,13 @@ def get_dice(bot, m, *arg):
 	d_sum = 0
 	print("0")
 	#最初の1回はカンマつかない
-	result = random.randint(1, roll)
+	result = random.randint(1, d_roll)
 	d_sum += result
 	r_text += result
 	print("1")
 	for i in range(num-1):
 		r_text += "、"
-		result += random.randint(1, roll)
+		result += random.randint(1, d_roll)
 		d_sum += result
 		r_text += result
 		print("2")
