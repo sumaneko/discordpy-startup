@@ -19,8 +19,7 @@ def get_dice(bot, m, arg):
 		  [100 , "「数字d数字」か「数字D数字」で入力してください～"],
 		]
 	#引数がない
-	t = list(arg) != 1
-	return t
+	return arg
 	#if list(arg) != 1:
 	#	return get_quotes(miss_quotes)
 
