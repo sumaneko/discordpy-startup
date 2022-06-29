@@ -24,20 +24,16 @@ def get_dice(bot, m, *arg):
 		return get_quotes(miss_quotes)
 
 	pattern = "^[1-9]\d*(d|D)[1-9]\d*$"
-	print("0")
 	#コンパイル
 	repatter = re.compile(pattern)
-	print("1")
 	content = repatter.match(target[0])
-	print("2")
-	return content.group()
+
 	#マッチしてない
 	if content is None:
 		return get_quotes(miss_quotes)
 
-	return content.group()
 	t = re.split("(d|D)", content.group())
-	return t
-#	return t[0] + "と" + t[1] + "と" + t[2] + "です"
+#	return t
+	return t[0] + "と" + t[1] + "と" + t[2] + "です"
 
 	return get_quotes(quotes)
