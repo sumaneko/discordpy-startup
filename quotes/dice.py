@@ -26,7 +26,6 @@ def get_dice(bot, m, *arg):
 	pattern = "^[1-9]\d*+(d|D)[1-9]\d*$"
 
 	content = re.match(pattern, target[0])
-	return content.group()
 
 	#マッチしてない
 	if content is None:
