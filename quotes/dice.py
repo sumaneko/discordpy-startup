@@ -46,9 +46,9 @@ def get_dice(bot, m, *arg):
 	#合計
 	d_sum = 0
 
-	print("0")
 	#最初の1回はカンマつかない
 	result = random.randint(1, d_roll)
+	print("aa")
 	d_sum += result
 	r_text += result
 	print("1")
