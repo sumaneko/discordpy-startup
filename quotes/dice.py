@@ -48,15 +48,12 @@ def get_dice(bot, m, *arg):
 
 	#最初の1回はカンマつかない
 	result = random.randint(1, d_roll)
-	print("aa")
 	d_sum += result
-	r_text += result
-	print("1")
+	r_text += str(result)
 	for i in range(num-1):
 		r_text += "、"
 		result = random.randint(1, d_roll)
 		d_sum += result
-		r_text += result
-		print("2")
+		r_text += str(result)
 
 	return f"{r_text}だったので{d_sum}です！"
