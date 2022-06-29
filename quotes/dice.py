@@ -36,10 +36,9 @@ def get_dice(bot, m, *arg):
 	t = re.split("(d|D)", content.group())
 
 	#振る回数
-	num = t[0]
+	num = int(t[0])
 	#賽の目
-	d_roll = t[2]
-	print(d_roll)
+	d_roll = int(t[2])
 	#出た目
 	result = 0
 	#出た目の羅列
