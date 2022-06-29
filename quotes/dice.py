@@ -23,7 +23,7 @@ def get_dice(bot, m, *arg):
 	if len(target) != 1:
 		return get_quotes(miss_quotes)
 
-	pattern = "^[1-9]\d*+(d|D)[1-9]\d*$"
+	pattern = "^[1-9]\d*(d|D)[1-9]\d*$"
 	print("0")
 	#コンパイル
 	repatter = re.compile(pattern)
