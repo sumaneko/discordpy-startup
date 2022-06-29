@@ -26,7 +26,7 @@ def get_dice(bot, m, *arg):
 	pattern = "^[1-9]\d*+(d|D)[1-9]\d*$"
 	#コンパイル
 	reppatter = re.compile(pattern)
-	c = target[0]
+	c = "1d34"
 	content = repatter.match(c)
 	return "テスト"
 	#マッチしてない
