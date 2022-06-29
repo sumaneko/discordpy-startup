@@ -39,12 +39,14 @@ def get_dice(bot, m, *arg):
 	num = t[0]
 	#賽の目
 	d_roll = t[2]
+	print(d_roll)
 	#出た目
 	result = 0
 	#出た目の羅列
 	r_text = ""
 	#合計
 	d_sum = 0
+
 	print("0")
 	#最初の1回はカンマつかない
 	result = random.randint(1, d_roll)
