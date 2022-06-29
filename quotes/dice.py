@@ -24,9 +24,8 @@ def get_dice(bot, m, *arg):
 		return get_quotes(miss_quotes)
 
 	pattern = "^[1-9]\d*+(d|D)[1-9]\d*$"
-	return target[0]
-	content = re.match(pattern, "1d3")
-	#content = re.match(pattern, target[0])
+
+	content = re.match(pattern, str(target[0]))
 	return "テスト"
 	#マッチしてない
 	if content is None:
