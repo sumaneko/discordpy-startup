@@ -17,7 +17,7 @@ def get_dice(bot, m, arg):
 
 	content = re.match(pattern, arg)
 
-	if content == None:
+	if content = None:
 		quotes = [
 		  [100 , "フォーマットが違います！「数字d数字」か「数字D数字」です！"],
 		  [100 , "フォーマットは「数字d数字」か「数字D数字」ですよ？"],
@@ -25,7 +25,7 @@ def get_dice(bot, m, arg):
 		]
 		return get_quotes(quotes)
 
-	t = content.group().split("d|D")
+	t = content.group().split("(d|D)")
 	return t[0] + "と" + t[1] + "と" + t[2] + "です"
 
 	return get_quotes(quotes)
