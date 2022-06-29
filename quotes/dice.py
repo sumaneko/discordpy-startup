@@ -39,6 +39,7 @@ def get_dice(bot, m, *arg):
 	num = int(t[0])
 	#賽の目
 	roll = int(t[2])
+	ptinr(roll)
 	#出た目
 	result = 0
 	#出た目の羅列
