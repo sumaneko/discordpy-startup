@@ -37,6 +37,8 @@ def get_dice(bot, m, *arg):
 
 	#振る回数
 	num = int(t[0])
+	if num > 10:
+		return "振る回数が多すぎです！10回までにしてください！！"
 	#賽の目
 	d_roll = int(t[2])
 	#出た目
