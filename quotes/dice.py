@@ -42,8 +42,8 @@ def get_dice(bot, m, *arg):
 	print(t[0])
 	print(num)
 	#賽の目
-	roll = t[2]
-	ptinrt(t[2])
+	roll = t[1]
+	ptinrt(t[1])
 	ptinr(roll)
 	#出た目
 	result = 0
