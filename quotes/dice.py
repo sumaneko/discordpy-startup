@@ -41,6 +41,8 @@ def get_dice(bot, m, *arg):
 		return "振る回数が多すぎです！10回までにしてください！！"
 	#賽の目
 	d_roll = int(t[2])
+	if d_roll >999999
+		return "100万より大きい数はちょっと・・・"
 	#出た目
 	result = 0
 	#出た目の羅列
