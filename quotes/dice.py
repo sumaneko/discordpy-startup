@@ -22,7 +22,6 @@ def get_dice(bot, m, *arg):
 	if len(list(arg)) != 1:
 		return get_quotes(miss_quotes)
 
-"""
 	pattern = "^[1-9]\d*+(d|D)[1-9]\d*$"
 
 	content = re.match(pattern, arg)
@@ -32,8 +31,7 @@ def get_dice(bot, m, *arg):
 		return get_quotes(miss_quotes)
 
 	t = content.group().split("(d|D)")
-	return "テスト"
+	return t
 #	return t[0] + "と" + t[1] + "と" + t[2] + "です"
 
 	return get_quotes(quotes)
-"""
