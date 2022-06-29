@@ -13,19 +13,25 @@ def get_dice(bot, m, arg):
 		]
 		return get_quotes(quotes)
 
-	pattern = "^[1-9]\d*+(d|D)[1-9]\d*$"
-
-	content = re.match(pattern, arg)
-
-	if content is None:
-		quotes = [
+	miss_quotes = [
 		  [100 , "フォーマットが違います！「数字d数字」か「数字D数字」です！"],
 		  [100 , "フォーマットは「数字d数字」か「数字D数字」ですよ？"],
 		  [100 , "「数字d数字」か「数字D数字」で入力してください～"],
 		]
-		return get_quotes(quotes)
+	#引数がない
+	if arg is None:
+		return get_quotes(miss_quotes)
+
+	pattern = "^[1-9]\d*+(d|D)[1-9]\d*$"
+
+	content = re.match(pattern, arg)
+
+	#マッチしてない
+	if content is None:
+		return get_quotes(miss_quotes)
 
 	t = content.group().split("(d|D)")
-	return t[0] + "と" + t[1] + "と" + t[2] + "です"
+	return "テスト"
+#	return t[0] + "と" + t[1] + "と" + t[2] + "です"
 
 	return get_quotes(quotes)
