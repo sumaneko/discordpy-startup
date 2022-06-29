@@ -1,7 +1,7 @@
 from mylib.mymodule import get_quotes
 from mymodule.ryonage_bot import RyonageBot
 import re
-def get_dice(bot, m, arg):
+def get_dice(bot, m, *arg):
 	name = m.author.name if m.author.nick is None else m.author.nick
 	#元気状態なら
 	if bot.get_hp() <= bot.dying_hp:
@@ -19,8 +19,7 @@ def get_dice(bot, m, arg):
 		  [100 , "「数字d数字」か「数字D数字」で入力してください～"],
 		]
 	#引数がない
-	return arg
-	#if list(arg) != 1:
+	return list(arg)
 	#	return get_quotes(miss_quotes)
 
 """
