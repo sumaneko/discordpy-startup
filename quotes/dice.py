@@ -1,5 +1,6 @@
 from mylib.mymodule import get_quotes
 from mymodule.ryonage_bot import RyonageBot
+import re
 def get_dice(bot, m, arg):
 	name = m.author.name if m.author.nick is None else m.author.nick
 	#元気状態なら
@@ -12,5 +13,13 @@ def get_dice(bot, m, arg):
 		]
 		return get_quotes(quotes)
 
-	return arg
+	pattern = "^\d*(d|D)\d*$"
+
+	content = re.match(pattern, arg)
+
+	if content:
+		return content
+	else:
+		return "マッチしてないです"
+
 	return get_quotes(quotes)
