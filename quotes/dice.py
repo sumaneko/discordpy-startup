@@ -26,6 +26,6 @@ def get_dice(bot, m, arg):
 		return get_quotes(quotes)
 
 	t = content.group().split("(d|D)")
-	return t[0] + "と" + t[1] + "と" + t[2]"です"
+	return t[0] + "と" + t[1] + "と" + t[2] + "です"
 
 	return get_quotes(quotes)
