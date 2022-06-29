@@ -39,8 +39,11 @@ def get_dice(bot, m, *arg):
 
 	#振る回数
 	num = t[0]
+	print(t[0])
+	print(num)
 	#賽の目
 	roll = t[2]
+	ptinrt(t[2])
 	ptinr(roll)
 	#出た目
 	result = 0
