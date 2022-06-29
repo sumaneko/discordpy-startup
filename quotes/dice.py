@@ -54,7 +54,7 @@ def get_dice(bot, m, *arg):
 	print("1")
 	for i in range(num-1):
 		r_text += "、"
-		result += random.randint(1, d_roll)
+		result = random.randint(1, d_roll)
 		d_sum += result
 		r_text += result
 		print("2")
