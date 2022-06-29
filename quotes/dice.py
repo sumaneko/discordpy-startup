@@ -24,8 +24,9 @@ def get_dice(bot, m, *arg):
 		return get_quotes(miss_quotes)
 
 	pattern = "^[1-9]\d*+(d|D)[1-9]\d*$"
-
-	content = re.match(pattern, str(target[0]))
+	#コンパイル
+	reppatter = re.compile(pattern)
+	content = repatter.match(target[0])
 	return "テスト"
 	#マッチしてない
 	if content is None:
