@@ -166,6 +166,16 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
+	if "百合" in m.content or "レズ" in m.content or "女の子同士" in m.content:
+		quotes = [
+			[100, "女の子同士でエッチしちゃうんですか？"],
+			[100, "女の子もかわいい女の子が好きなんですよ、かわいいから"],
+			[100, "メス交尾！"],
+			[100, "女の子同士なら避妊する必要がないんですよ！"],
+			[100, "女の子同士でチューしちゃったりとか！？"]
+		]
+		return get_quotes(quotes)
+
 	if "ちんこ" in m.content or "チンコ" in m.content or "チンチン" in m.content or "ちんちん" in m.content or "チンポ" in m.content or "ちんぽ" in m.content:
 		quotes = [
 			[100, "え、おちんちん・・・？"],
@@ -312,6 +322,13 @@ def get_shimoneta(m):
 			[100, "おちんちん・・・舐めさせられるの苦手なんですよね・・・"],
 			[100, "ぺろぺろされるの好きなんですか？"],
 			[100, "どうせ頭を掴んでイラマする気なんでしょ！"]
+		]
+		return get_quotes(quotes)
+
+	if "貝合せ" in m.content:
+		quotes = [
+			[100, "おまんこ同士を擦り合わせるやつですか？"],
+			[100, "貝合せもけっこう気持ちよくするのが難しいらしいですよ"]
 		]
 		return get_quotes(quotes)
 
