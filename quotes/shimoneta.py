@@ -81,7 +81,7 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
-	if "エッチ" in m.content or "えっち" in m.content:
+	if "エッチ" in m.content or "えっち" in m.content or ":elturo:" in m.content or ":eroi:" in m.content:
 		quotes = [
 			[100, "今エッチな話しました？"],
 			[100, "エッチしたいんですか？いや私とじゃなく・・・"],
@@ -89,7 +89,7 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
-	if "すじ" in m.content and "あらすじ" not in m.content:
+	if ("すじ" in m.content and "あらすじ" not in m.content) or ":suji:" in m.content:
 		quotes = [
 			[100, "すじ！"],
 			[100, "すじは単線ならモザイクいらないって聞きますよ"],
@@ -98,11 +98,12 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
-	if "まんこ" in m.content or "マンコ" in m.content or "まんまん" in m.content or "陰唇" in m.content:
+	if "まんこ" in m.content or "マンコ" in m.content or "まんまん" in m.content or "陰唇" in m.content or ":omanko:" in m.content:
 		quotes = [
 			[100, "おまんこ！"],
 			[100, "やだなぁエッチなんだから・・・"],
-			[50, "<:suji:864157257175531560> "],
+			[50, "<:omanko:1000067595690582076>"],
+			[50, "<:suji:864157257175531560>"],
 			[100, "おまんこなんて言ってたら引かれちゃいますよ？"]
 		]
 		return get_quotes(quotes)
@@ -132,7 +133,7 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 	
-	if "おっぱい" in m.content or "乳首" in m.content or "巨乳" in m.content:
+	if "おっぱい" in m.content or "乳首" in m.content or "巨乳" in m.content or ":oppaioppai:" in m.content:
 		quotes = [
 			[100, "おっぱい！"],
 			[100, "おっぱいおっぱい"],
@@ -177,12 +178,12 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
-	if "ちんこ" in m.content or "チンコ" in m.content or "チンチン" in m.content or "ちんちん" in m.content or "チンポ" in m.content or "ちんぽ" in m.content:
+	if "ちんこ" in m.content or "チンコ" in m.content or "チンチン" in m.content or "ちんちん" in m.content or "チンポ" in m.content or "ちんぽ" in m.content or ":chinpo:" in m.content:
 		quotes = [
 			[100, "え、おちんちん・・・？"],
 			[100, "ちーんちん"],
 			[100, "おちんちんの長さは定規を恥骨に押し付けて測るんですよ、知ってました？"],
-			[50, "<:standup:805846231851073647> "],
+			[50, "<:standup:805846231851073647>"],
 			[100, "ち・・・チンポ"]
 		]
 		return get_quotes(quotes)
@@ -269,7 +270,7 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
-	if "シコ" in m.content:
+	if "シコ" in m.content or ":sikosiko:" in m.content:
 		quotes = [
 			[100, "シコシコしてほしいんですか？"],
 			[100, "シッコーーいッ！"],
