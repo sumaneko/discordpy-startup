@@ -26,6 +26,7 @@ from quotes.kubishime import get_kubishime
 from quotes.penpen import get_penpen
 from quotes.erabe import get_erabe
 from quotes.dice import get_dice
+from quotes.jobchange import get_job
 
 #デフォのintentではmemberにアクセスできないので、ここでTrueに（app画面からのserver members intent設定も必要）
 inte = discord.Intents.default()
@@ -177,6 +178,10 @@ async def omikuji(ctx):
 @bot.command()
 async def lucky(ctx):
 	await ctx.send(get_lucky(bot_chan, ctx.message))
+
+@bot.command()
+async def jobchange(ctx):
+	await ctx.send(get_job(bot_chan, ctx.message))
 	
 @bot.command()
 async def rkey(ctx):
