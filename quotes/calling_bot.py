@@ -174,12 +174,14 @@ def get_calling_bot(m):
 				[100, "触ってもいいですけど敏感だから優しくしてくださいね？"]
 			]
 			return get_quotes(quotes)
+
 		if "元気" in m.content:
 			quotes = [
 				[100, "元気ですよ！今はね"],
 				[100, "私は元気に生きてます！"],
 				[100, "まさかこれから私を元気じゃなくするつもりじゃ・・・"]
 			]
+			return get_quotes(quotes)
 
 	#BOTちゃんだけの時のreturn
 	return t
