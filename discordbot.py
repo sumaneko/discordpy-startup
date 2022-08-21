@@ -27,6 +27,7 @@ from quotes.penpen import get_penpen
 from quotes.erabe import get_erabe
 from quotes.dice import get_dice
 from quotes.jobchange import get_job
+from quotes.prpr import get_prpr
 
 #デフォのintentではmemberにアクセスできないので、ここでTrueに（app画面からのserver members intent設定も必要）
 inte = discord.Intents.default()
@@ -166,6 +167,10 @@ async def nadenade(ctx):
 async def momimomi(ctx):
 	bot_chan.heal(5)
 	await ctx.send(get_momimomi(bot_chan, ctx.message))
+
+@bot.command()
+async def prpr(ctx):
+	await ctx.send(get_prpr(bot_chan, ctx.message))
 
 @bot.command()
 async def morase(ctx):
