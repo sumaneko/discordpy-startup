@@ -366,7 +366,7 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
-	if "催眠" in m.content:
+	if "童貞" in m.content:
 		quotes = [
 			[100, "童貞が許されるのはー小学生までだよねー！"],
 			[100, "英語だと童貞もヴァージンって言うんですよ"],
