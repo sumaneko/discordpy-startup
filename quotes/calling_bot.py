@@ -51,6 +51,14 @@ def get_calling_bot(m):
 			]
 			return get_quotes(quotes)
 
+		if "レイプ" in m.content or "輪姦" in m.content:
+			quotes = [
+				[100, "れ、レイプなんてさせませんよ！？"],
+				[100, "レイプ！？ひぇ・・・逃げます・・・"],
+				[100, "無理矢理犯されるなんて嫌ぁ！！"]
+			]
+			return get_quotes(quotes)
+
 		if "リョナ" in m.content:
 			quotes = [
 				[100, "いやあの・・・私をリョナりたい気持ちは分からないでもないんですけど・・・"],
