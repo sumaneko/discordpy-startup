@@ -145,6 +145,22 @@ def get_calling_bot(m):
 			]
 			return get_quotes(quotes)
 
+		if "マゾ" in m.content or "ドM" in m.content or "ドＭ" in m.content:
+			quotes = [
+				[100, "マゾじゃないです！リョナラーですよ私は！"],
+				[100, "リョナられて悦んじゃうわけないでしょ！"],
+				[100, "い、虐められるのが好きなわけじゃないです・・・"]
+			]
+			return get_quotes(quotes)
+
+		if "サド" in m.content or "ドS" in m.content or "ドＳ" in m.content or "サディスト" in m.content:
+			quotes = [
+				[100, "そりゃーどちらかといえばSですよリョナラーなので！"],
+				[100, "女王様とお呼び！！！"],
+				[100, "女の子をSMどころのレベルじゃないリョナで虐めたいですよね"]
+			]
+			return get_quotes(quotes)
+
 		if "オナニー" in m.content or "アナニー" in m.content or "クリオナ" in m.content:
 			quotes = [
 				[100, "公衆の面前でオナニーなんかしませんよ！"],
