@@ -30,7 +30,8 @@ from quotes.jobchange import get_job
 from quotes.prpr import get_prpr
 
 #デフォのintentではmemberにアクセスできないので、ここでTrueに（app画面からのserver members intent設定も必要）
-inte = discord.Intents.default()
+#inte = discord.Intents.default()
+inte = discord.Intents.all()
 inte.members = True
 #BOTをコンストラクト
 bot = commands.Bot(command_prefix='/', intents=inte)
