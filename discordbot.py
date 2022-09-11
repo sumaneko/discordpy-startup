@@ -220,6 +220,7 @@ async def dice(ctx, *arg):
 async def on_message(message):
 	#プレイ中を処理する
 	global playing_turn
+	print(len(message.content))
 	#健康ならプレイ中
 	if bot_chan.dying_hp < bot_chan.get_hp():
 		playing_turn -= 1
@@ -240,7 +241,6 @@ async def on_message(message):
 		bot_chan.heal(1)
 		#瀕死じゃないなら喋る
 		if bot_chan.dying_hp < bot_chan.get_hp():
-			print(len(message.content))
 			#コマンドなら何もしないためのif
 			if message.content[0] != "/":
 				global prev_time
