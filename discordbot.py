@@ -35,7 +35,7 @@ from quotes.prpr import get_prpr
 #inte.members = True
 #BOTをコンストラクト
 #bot = commands.Bot(command_prefix='/', intents=inte)
-bot = commands.Bot(intents=discord.Intents.all())
+bot = discord.Client(intents=discord.Intents.all())
 #動かすにはトークンが必要
 token = os.environ['DISCORD_BOT_TOKEN']
 
