@@ -31,10 +31,11 @@ from quotes.prpr import get_prpr
 
 #デフォのintentではmemberにアクセスできないので、ここでTrueに（app画面からのserver members intent設定も必要）
 #inte = discord.Intents.default()
-inte = discord.Intents.all()
+#inte = discord.Intents.all()
 #inte.members = True
 #BOTをコンストラクト
-bot = commands.Bot(command_prefix='/', intents=inte)
+#bot = commands.Bot(command_prefix='/', intents=inte)
+bot = commands.Bot(command_prefix='/')
 #動かすにはトークンが必要
 token = os.environ['DISCORD_BOT_TOKEN']
 
