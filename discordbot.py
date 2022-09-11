@@ -313,6 +313,6 @@ async def vote(ctx, *args):
 				await vote.add_reaction(vote_emoji_on_some_choice[index])
 #アンケート終わり*************************************************************************************************************
 
-	
+
 #起動
 bot.run(token)
