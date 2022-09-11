@@ -31,12 +31,11 @@ from quotes.prpr import get_prpr
 
 #デフォのintentではmemberにアクセスできないので、ここでTrueに（app画面からのserver members intent設定も必要）
 inte = discord.Intents.default()
-#inte = discord.Intents.all()
 inte.members = True
 inte.message_content = True
+
 #BOTをコンストラクト
 bot = commands.Bot(command_prefix='/', intents=inte)
-#bot = discord.Client(intents=discord.Intents.all())
 #動かすにはトークンが必要
 token = os.environ['DISCORD_BOT_TOKEN']
 
@@ -224,7 +223,6 @@ async def dice(ctx, *arg):
 async def on_message(message):
 	#プレイ中を処理する
 	global playing_turn
-	print(len(message.content))
 	#健康ならプレイ中
 	if bot_chan.dying_hp < bot_chan.get_hp():
 		playing_turn -= 1
