@@ -35,7 +35,7 @@ from quotes.prpr import get_prpr
 #inte.members = True
 #BOTをコンストラクト
 #bot = commands.Bot(command_prefix='/', intents=inte)
-bot = commands.Bot(command_prefix='/')
+bot = commands.Bot(intents=discord.Intents.all())
 #動かすにはトークンが必要
 token = os.environ['DISCORD_BOT_TOKEN']
 
@@ -49,6 +49,7 @@ playing_turn = 0
 #ボットちゃん
 bot_chan = RyonageBot()
 
+"""
 #エラーだけど吐かせないでコメントで終わり
 @bot.event
 async def on_command_error(ctx, error):
@@ -216,6 +217,7 @@ async def dice(ctx, *arg):
 	await ctx.send(get_dice(bot_chan, ctx.message, *arg))
 
 
+"""
 #発言に反応する
 @bot.event
 async def on_message(message):
@@ -259,7 +261,7 @@ async def on_message(message):
 					prev_time = datetime.datetime.now()
 	await bot.process_commands(message)
 
-
+"""
 #メンバー加入
 @bot.event
 async def on_member_join(member):
@@ -309,6 +311,7 @@ async def vote(ctx, *args):
 			if index < len(vote_emoji_on_some_choice):
 				await vote.add_reaction(vote_emoji_on_some_choice[index])
 #アンケート終わり*************************************************************************************************************
+"""
 	
 #起動
 bot.run(token)
