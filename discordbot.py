@@ -50,7 +50,7 @@ playing_turn = 0
 #ボットちゃん
 bot_chan = RyonageBot()
 
-"""
+
 #エラーだけど吐かせないでコメントで終わり
 @bot.event
 async def on_command_error(ctx, error):
@@ -218,7 +218,7 @@ async def dice(ctx, *arg):
 	await ctx.send(get_dice(bot_chan, ctx.message, *arg))
 
 
-"""
+
 #発言に反応する
 @bot.event
 async def on_message(message):
@@ -262,7 +262,7 @@ async def on_message(message):
 					prev_time = datetime.datetime.now()
 	await bot.process_commands(message)
 
-"""
+
 #メンバー加入
 @bot.event
 async def on_member_join(member):
@@ -312,7 +312,7 @@ async def vote(ctx, *args):
 			if index < len(vote_emoji_on_some_choice):
 				await vote.add_reaction(vote_emoji_on_some_choice[index])
 #アンケート終わり*************************************************************************************************************
-"""
+
 	
 #起動
 bot.run(token)
