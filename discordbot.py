@@ -240,6 +240,7 @@ async def on_message(message):
 		bot_chan.heal(1)
 		#瀕死じゃないなら喋る
 		if bot_chan.dying_hp < bot_chan.get_hp():
+			print(len(message.content)
 			#コマンドなら何もしないためのif
 			if message.content[0] != "/":
 				global prev_time
