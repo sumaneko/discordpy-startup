@@ -331,6 +331,38 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
+	if "異種姦" in m.content or "モンスター姦" m.content:
+		quotes = [
+			[100, "ひ、ヒトじゃない化け物に犯されちゃうの・・・！？"],
+			[100, "異種族なだけあっておちんちんも人間サイズじゃないんだ！きっと！"],
+			[100, "異種姦にハマってラブラブになると異種和姦になっちゃうんですって"]
+		]
+		return get_quotes(quotes)
+
+	if "獣姦" in m.content:
+		quotes = [
+			[100, "わんことかお馬さんにのおちんちんで犯されちゃうんだ・・・"],
+			[100, "おまんこにバターを塗れば舐めちゃうってほんとー？"],
+			[100, "人間では味わえないおちんちんを持ってるんですかね・・・？"]
+		]
+		return get_quotes(quotes)
+
+	if "馬姦" in m.content:
+		quotes = [
+			[100, "お馬さんのおちんちんなんて入るわけないでしょ！"],
+			[100, "おちんちんだけで私の腕よりあるんじゃないですか？"],
+			[100, "お馬さんだけあって精液もきっとたくさん出るんだ・・・"]
+		]
+		return get_quotes(quotes)
+
+	if "蟲姦" in m.content or "虫姦" in m.content:
+		quotes = [
+			[100, "虫さんに種付けされちゃうんですか？"],
+			[100, "虫さんの場合精子じゃなくて卵とか産み付けてくるんですよね"],
+			[100, "虫チンポで機械的に托卵されちゃうんだ・・・"]
+		]
+		return get_quotes(quotes)
+
 	if "腋" in m.content and "腋毛" not in m.content:
 		quotes = [
 			[100, f"{name}さんって腋フェチなんですか？"],
