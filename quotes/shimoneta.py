@@ -250,7 +250,7 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
-	if "レイプ" in m.content:
+	if "レイプ" in m.content or "強姦" in m.content:
 		quotes = [
 			[100, "無理矢理女の子を犯しちゃいけないんだぞー"],
 			[100, "レイプされても心までは折れないんだからっ！"],
