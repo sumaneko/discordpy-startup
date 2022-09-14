@@ -411,7 +411,7 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
-	if "精子" in m.content or "精液" in m.content or if "ザーメン" in m.content or if "ザー汁" in m.content:
+	if "精子" in m.content or "精液" in m.content or "ザーメン" in m.content or "ザー汁" in m.content:
 		quotes = [
 			[100, "精子一匹の全長って0.06mmで髪の毛の直径くらいなんですって！頭の部分は0.005mmらしいですよ"],
 			[100, "卵子の大きさは精子の頭の部分の長さの30倍以上とかなんですよ、受精描写する時の参考にしてくださいね"],
