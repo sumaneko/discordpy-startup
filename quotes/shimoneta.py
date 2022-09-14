@@ -331,7 +331,7 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
-	if "異種姦" in m.content or "モンスター姦" m.content:
+	if "異種姦" in m.content or "モンスター姦" in m.content:
 		quotes = [
 			[100, "ひ、ヒトじゃない化け物に犯されちゃうの・・・！？"],
 			[100, "異種族なだけあっておちんちんも人間サイズじゃないんだ！きっと！"],
