@@ -20,7 +20,7 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 	
-	if "リョナ" in m.content:
+	if "リョナ" in m.content or "虐待" in m.content:
 		#あまりに反応するから確率を下げる
 		if random.randint(0, 99) < 50:
 			quotes = [
