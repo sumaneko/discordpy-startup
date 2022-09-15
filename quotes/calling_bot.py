@@ -59,7 +59,7 @@ def get_calling_bot(m):
 			]
 			return get_quotes(quotes)
 
-		if "リョナ" in m.content:
+		if "リョナ" in m.content or "虐待" in m.content:
 			quotes = [
 				[100, "いやあの・・・私をリョナりたい気持ちは分からないでもないんですけど・・・"],
 				[100, "そうですよねリョナはいいですよね！え？なんでこっち見てるんです・・・？"],
