@@ -20,7 +20,7 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 	
-	if "リョナ" in m.content or "虐待" in m.content:
+	if "リョナ" in m.content:
 		#あまりに反応するから確率を下げる
 		if random.randint(0, 99) < 50:
 			quotes = [
@@ -34,6 +34,14 @@ def get_shimoneta(m):
 				[100, f"{name}さんも好きですか？リョナ"]
 			]
 			return get_quotes(quotes)
+
+	if "虐待" in m.content:
+		quotes = [
+			[100, "動物虐待ダメ絶対！！あ、美少女ならいいです"],
+			[100, "リョナよりも虐待の方がなんか重い感じがしませんか？"],
+			[100, "虐待ってなんかかわいそう・・・でも好き"]
+		]
+		return get_quotes(quotes)
 
 	if "アヌス" in m.content:
 		return "アヌスってアナルの名詞だって知ってました？でももう普通に名詞として使われてますよね"
