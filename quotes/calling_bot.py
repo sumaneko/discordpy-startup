@@ -254,5 +254,14 @@ def get_calling_bot(m):
 		]
 		return get_quotes(quotes)
 
+	if m.content == "死ね" or m.content == "しね":
+		quotes = [
+			[100, "ま、まさか私に死んでほしいんですか・・・？"],
+			[100, "死にたくないです・・・"],
+			[100, "いくらなんでもひどいですよ！・・・え？私に言ってる？"],
+			[100, "わ、私になら言ってもいいですけど他の人へは絶対言っちゃダメです・・・"]
+		]
+		return get_quotes(quotes)
+
 	#BOTちゃんだけの時のreturn
 	return t
