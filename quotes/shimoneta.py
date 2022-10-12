@@ -273,6 +273,22 @@ def get_shimoneta(m):
 		]
 		return get_quotes(quotes)
 
+	if "中出し" in m.content:
+		quotes = [
+			[100, "中出しし続けると1年で85%の確率で妊娠するらしいですよ"],
+			[100, "あ、赤ちゃんできちゃうぅぅーー！！ってやつですよね！"],
+			[100, f"{name}さんも中出し派ですか？"]
+		]
+		return get_quotes(quotes)
+
+	if "外出し" in m.content:
+		quotes = [
+			[100, "だ、出すなら外に出して！！ってやつですよね！"],
+			[100, "外出ししても妊娠すると言いますが、確実に行えれば妊娠率が4%まで下がるんですって"],
+			[100, "外出ししてぶっかけちゃうんですか？"]
+		]
+		return get_quotes(quotes)
+
 	if "触手" in m.content:
 		quotes = [
 			[100, "触手はいいですよね・・・色んなことができて・・・"],

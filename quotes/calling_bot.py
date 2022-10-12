@@ -42,6 +42,15 @@ def get_calling_bot(m):
 			]
 			return get_quotes(quotes)
 
+		if "死ね" in m.content or "死んでほしい" in m.content:
+			quotes = [
+				[100, "し、死にませんよ・・・"],
+				[100, "死にたくないもん・・・"],
+				[100, "死ねだなんて・・・ひどいよ・・・"],
+				[100, "ひ、ひどいこと言わないでください・・・"]
+			]
+			return get_quotes(quotes)
+
 		if "犯す" in m.content or "犯したい" in m.content or "ヤりたい" in m.content or "ヤらせろ" in m.content or "おかす" in m.content:
 			quotes = [
 				[100, "あ、あの？目が本気ですよ・・・？"],
