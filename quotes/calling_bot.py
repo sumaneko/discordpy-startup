@@ -51,6 +51,15 @@ def get_calling_bot(m):
 			]
 			return get_quotes(quotes)
 
+		if "しゃぶれ" in m.content or "しゃぶって" in m.content or "舐めて" in m.content or "舐めろ" in m.content:
+			quotes = [
+				[100, "ひっ！急におちんちん出さないで！"],
+				[100, "おちんちんだったら誰のでも舐めると思ってるんですか！？"],
+				[100, "し、しまって！それしまってくださいっ！"],
+				[100, "本当にぺろぺろするわけないでしょー！！"]
+			]
+			return get_quotes(quotes)
+
 		if "レイプ" in m.content or "輪姦" in m.content:
 			quotes = [
 				[100, "れ、レイプなんてさせませんよ！？"],
