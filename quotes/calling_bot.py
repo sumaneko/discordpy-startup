@@ -217,5 +217,33 @@ def get_calling_bot(m):
 			]
 			return get_quotes(quotes)
 
+	if m.content == "ヤらせろ" or m.content == "やらせろ" or m.content == "犯す" or m.content == "犯させろ" or m.content == "おかす" or m.content == "おかす":
+		quotes = [
+			[100, "え、あの・・・私に言ってます・・・？"],
+			[100, "や、ヤらせませんよ・・・"],
+			[100, "私に言ってるんですか！？嫌ですよ！！"],
+			[100, "自分の手でも使っててください！"],
+			[100, "赤ちゃん出来ちゃうからダメです！"]
+		]
+		return get_quotes(quotes)
+
+	if m.content == "しゃぶれ" or m.content == "しゃぶれよ":
+		quotes = [
+			[100, "い、嫌ですよ！"],
+			[100, "しゃぶりませんよ！！"],
+			[100, "ちゃんとおちんちん洗いましたか？それでも舐めてあげませんけどねー"],
+			[100, "わわ、突然ズボンを降ろさないで！"],
+		]
+		return get_quotes(quotes)
+
+	if m.content == "殺す" or m.content == "ころす":
+		quotes = [
+			[100, "え、わ、私を殺しちゃおうとしてます・・・？"],
+			[100, "死にたくないので嫌です・・・"],
+			[100, "そんな野蛮な言葉使っちゃいけませんよ！・・・え？私に言ってる？"],
+			[100, "や、やぁ・・・殺さないで・・・"]
+		]
+		return get_quotes(quotes)
+
 	#BOTちゃんだけの時のreturn
 	return t
