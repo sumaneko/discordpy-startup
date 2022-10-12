@@ -83,5 +83,11 @@ def get_hobby(m):
 		[100, "私も寒いからこたつで丸くなりたいです・・・"]
 		]
 		return get_quotes(quotes)
+
+	if m.content == "お前を殺す":
+		quotes = [
+		[100, "何なのこの人・・・"]
+		]
+		return get_quotes(quotes)
 		
 	return t
