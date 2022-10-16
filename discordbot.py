@@ -216,11 +216,10 @@ async def erabe(ctx, *args):
 async def dice(ctx, *arg):
 	await ctx.send(get_dice(bot_chan, ctx.message, *arg))
 
-
 @bot.command()
 async def unchiku(ctx):
-	await ctx.send("test").add_reaction(":regional_indicator_y: ")
-
+#	await ctx.send("test").add_reaction(":regional_indicator_y: ")
+	await ctx.send("test")
 
 #発言に反応する
 @bot.event
