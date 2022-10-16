@@ -219,7 +219,8 @@ async def dice(ctx, *arg):
 @bot.command()
 async def unchiku(ctx):
 	await ctx.send("test")
-	await ctx.send(text).add_reaction("🇾")
+	line = await ctx.send(text)
+	await line.add_reaction("🇾")
 	#await ctx.send("test").add_reaction(":regional_indicator_y: ")
 
 #発言に反応する
