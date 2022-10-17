@@ -28,6 +28,7 @@ from quotes.erabe import get_erabe
 from quotes.dice import get_dice
 from quotes.jobchange import get_job
 from quotes.prpr import get_prpr
+from quotes.unchiku import get_unchiku
 
 #デフォのintentではmemberにアクセスできないので、ここでTrueに（app画面からのserver members intent設定も必要）
 inte = discord.Intents.default()
@@ -218,10 +219,11 @@ async def dice(ctx, *arg):
 
 @bot.command()
 async def unchiku(ctx):
-	line = await ctx.send("test")
-	await line.add_reaction("🇾")
-	await line.add_reaction("🇳")
-	#await ctx.send("test").add_reaction(":regional_indicator_y: ")
+	line = await ctx.send(get_unchiku(bot_chan, ctx.message))
+	await line.add_reaction("<:hee:1031502459652280320>")
+	await line.add_reaction("<:sitteru:1031502489717059694>")
+	#await line.add_reaction("🇾")
+	#await line.add_reaction("🇳")
 
 #発言に反応する
 @bot.event
