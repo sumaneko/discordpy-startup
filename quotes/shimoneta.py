@@ -295,7 +295,7 @@ def get_shimoneta(m):
 			[100, "触手でお尻だけじゃなく内臓とお口まで犯されちゃうなんて・・・欲張り！"],
 			[100, "口から突っ込んでお尻から出てくる派ですか？それともお尻から挿入れちゃいますか？"],
 			[100, "丁寧に進ませないと内臓が破けちゃいますよ！"],
-			[100, "つ【https://ux.getuploader.com/znzn_loader/download/4】（ZNZNさん製「触手貫通イライラ棒」FLASH版はもうできません）"],
+			[100, "つ【https://ux.getuploader.com/znzn_loader/download/4 】（ZNZNさん製「触手貫通イライラ棒」FLASH版はもうできません）"],
 			[100, "触手が貫通しても死なないなんてすごいですよね！"]
 		]
 		return get_quotes(quotes)
