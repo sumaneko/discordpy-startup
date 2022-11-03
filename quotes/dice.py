@@ -42,7 +42,7 @@ def get_dice(bot, m, *arg):
 	#賽の目
 	d_roll = int(t[2])
 	if d_roll >999999:
-		return "100万より大きい数はちょっと・・・"
+		return "100万以上の数はちょっと・・・"
 	#出た目
 	result = 0
 	#出た目の羅列
