@@ -155,6 +155,16 @@ def get_calling_bot(m):
 			]
 			return get_quotes(quotes)
 
+		if "謝って" in m.content or "謝れ" in m.content:
+			quotes = [
+				[100, "な、なんで私が謝らなきゃいけないんですか・・・"],
+				[100, "私何か悪いことしちゃいました・・・？"],
+				[100, "え、ご・・・ごめんなさい"],
+				[50, "だが私は謝らない"],
+				[100, "す、すみません・・・"]
+			]
+			return get_quotes(quotes)
+
 		if "変態" in m.content:
 			quotes = [
 				[100, "わわわたしは変態なんかじゃないですよ"],
@@ -272,5 +282,6 @@ def get_calling_bot(m):
 		]
 		return get_quotes(quotes)
 
+	#[100, ""],
 	#BOTちゃんだけの時のreturn
 	return t
