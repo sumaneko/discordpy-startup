@@ -56,7 +56,7 @@ bot_chan = RyonageBot()
 async def on_command_error(ctx, error):
 	orig_error = getattr(error, "original", error)
 	error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
-	await print(error_msg)
+	print(error_msg)
 	#瀕死じゃないなら喋る
 	if bot_chan.dying_hp < bot_chan.get_hp():
 		await ctx.send("そんなの知らないです・・・")
