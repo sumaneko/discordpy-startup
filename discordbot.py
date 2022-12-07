@@ -220,7 +220,8 @@ async def dice(ctx, *arg):
 @bot.command()
 async def unchiku(ctx):
 	line = await ctx.send(get_unchiku(bot_chan, ctx.message))
-	await line.add_reaction("<:hee:1031502459652280320>")
+	await line.add_reaction("<:suji:864157257175531560>")
+	#await line.add_reaction("<:hee:1031502459652280320>")
 	#await line.add_reaction("<:sitteru:1031502489717059694>")
 	#await line.add_reaction("🇾")
 	#await line.add_reaction("🇳")
