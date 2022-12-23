@@ -53,6 +53,7 @@ def get_shimoneta(m):
 			[100, "男の子も女の子も出来るアナニー・・・これぞ男女平等ですね"],
 			[100, "アナニーだけでイケるようになるにはかなりの熟練度が必要なんですよ"]
 		]
+		return get_quotes(quotes)
 
 	if "アナル" in m.content or "肛門" in m.content or "ケツ穴" in m.content or "ケツの穴" in m.content or "けつの穴" in m.content or "お尻の穴" in m.content or ":anal:" in m.content:
 		quotes = [
