@@ -202,7 +202,7 @@ async def keisan(ctx, *, formula: str):
 	#瀕死じゃないなら喋る
 	if bot_chan.dying_hp < bot_chan.get_hp():
 		try:
-			await ctx.send(eval(formula))
+			await ctx.send(formula + "の結果は" + eval(formula) + "です")
 		except Exception as e:
 			await ctx.send(str(e) + "らしいですよ、何か間違ってますよ")
 	else:
