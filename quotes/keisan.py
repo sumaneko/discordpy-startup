@@ -15,7 +15,7 @@ def get_keisan(bot, m, formula):
 		return get_quotes(quotes)
 
 	miss_quotes = [
-		[100 , "これフォーマット違うんじゃないですか？数字と+-/*とカッコにしてくださいね"],
+		[100 , "フォーマットが違うんじゃないですか？数字と+-/*とカッコだけにしてくださいね"],
 		[100 , "これフォーマット違います！何か変なコマンド入れようとしたりしてないでしょうね？エッチ！！"],
 		[100 , "何か変ですよこれ"],
 		]
@@ -29,9 +29,17 @@ def get_keisan(bot, m, formula):
 
 	#マッチしてない
 	if content is None:
-		return "マッチしてないです"
+		return get_quotes(miss_quotes)
 
-	return "マッチしてます"
+	result = eval(formula)
+	quotes = [
+		[100 , f"「{formula}」の結果は・・・「{result}」っです！"],
+		[100 , f"{name}さんの代わりに私が「{formula}」の答えを教えてあげましょう！「{result}」です！！"],
+		[100 , f"「{formula}」の答えはなんだと思いますか？・・・ふふふ、「{result}」ですよ！"],
+		[100 , f"「{formula}」は「{result}」です！暗算なら得意なんですよ！"],
+		]
+
+	return get_quotes(quotes)
 """
 	t = re.split("(d|D)", content.group())
 
