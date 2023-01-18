@@ -200,18 +200,8 @@ async def rkey(ctx):
 
 
 @bot.command()
-async def keisan(ctx, formula: str):
-	await ctx.send(get_keisan(bot_chan, ctx.message, formula))
-"""
-	#瀕死じゃないなら喋る
-	if bot_chan.dying_hp < bot_chan.get_hp():
-		try:
-			await ctx.send(str(formula) + "の結果は" + str(eval(formula)) + "です！！")
-		except Exception as e:
-			await ctx.send(str(e) + "らしいですよ、何か間違ってますよ")
-	else:
-		await ctx.send("電卓で、も・・・使ってればい・・・でしょ・・・")
-"""
+async def keisan(ctx, *arg):
+	await ctx.send(get_keisan(bot_chan, ctx.message, *arg))
 	
 @bot.command()
 async def syabette(ctx):

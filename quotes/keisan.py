@@ -2,7 +2,7 @@ from mylib.mymodule import get_quotes
 from mymodule.ryonage_bot import RyonageBot
 import re
 import random
-def get_keisan(bot, m, formula):
+def get_keisan(bot, m, *arg):
 	name = m.author.name if m.author.nick is None else m.author.nick
 	#元気状態なら
 	if bot.get_hp() <= bot.dying_hp:
@@ -14,6 +14,7 @@ def get_keisan(bot, m, formula):
 		]
 		return get_quotes(quotes)
 
+	formula = join(arg)
 	miss_quotes = [
 		[100 , "フォーマットが違うんじゃないですか？数字と+-/*とカッコだけにしてくださいね"],
 		[100 , "これフォーマット違います！何か変なコマンド入れようとしたりしてないでしょうね？エッチ！！"],
@@ -22,7 +23,6 @@ def get_keisan(bot, m, formula):
 
 	pattern = "[\d\s\(\)\+\-\*\/]+"
 
-#	pattern = "^[1-9]\d*(d|D)[1-9]\d*$"
 	#コンパイル
 	repatter = re.compile(pattern)
 	content = repatter.match(formula)
