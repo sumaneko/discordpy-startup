@@ -3,8 +3,6 @@ from mymodule.ryonage_bot import RyonageBot
 import re
 import random
 def get_keisan(bot, m, formula):
-	return formula
-"""
 	name = m.author.name if m.author.nick is None else m.author.nick
 	#元気状態なら
 	if bot.get_hp() <= bot.dying_hp:
@@ -24,17 +22,21 @@ def get_keisan(bot, m, formula):
 	target = list(arg)
 	#引数の数がおかしい
 	if len(target) != 1:
-		return get_quotes(miss_quotes)
+		return get_quotes("引数は1個にしてください、ちなみに\"でくくると半角スペースも使えますよ")
 
-	pattern = "^[1-9]\d*(d|D)[1-9]\d*$"
+	pattern = "[\d\s\(\)\+\-\*\/]+"
+
+#	pattern = "^[1-9]\d*(d|D)[1-9]\d*$"
 	#コンパイル
 	repatter = re.compile(pattern)
 	content = repatter.match(target[0])
 
 	#マッチしてない
 	if content is None:
-		return get_quotes(miss_quotes)
+		return "マッチしてないです"
 
+	return "マッチしてます"
+"""
 	t = re.split("(d|D)", content.group())
 
 	#振る回数
@@ -68,5 +70,4 @@ def get_keisan(bot, m, formula):
 		[100 , f"{r_text}！合計{d_sum}です！多分！"],
 		]
 	return get_quotes(quotes)
-
 """
