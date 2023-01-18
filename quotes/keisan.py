@@ -23,6 +23,7 @@ def get_keisan(bot, m, *arg):
 
 	pattern = "[0-9]+"
 #	pattern = "[0-9\s\(\)\+\-\*\/]+"
+#	pattern = "[0-9\s\(\)\+\-\*\/]+"
 
 	#コンパイル
 	repatter = re.compile(pattern)
