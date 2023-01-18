@@ -196,6 +196,17 @@ async def jobchange(ctx):
 @bot.command()
 async def rkey(ctx):
 	bot_chan.heal(9999)
+
+@bot.command()
+async def keisan(ctx, *, formula: str):
+	#瀕死じゃないなら喋る
+	if bot_chan.dying_hp < bot_chan.get_hp():
+		try:
+			await ctx.send(eval(formula))
+		except Exception as e:
+			await ctx.send(str(e) + "らしいですよ、何か間違ってますよ")
+	else:
+		await ctx.send("電卓で、も・・・使ってればい・・・でしょ・・・")
 	
 @bot.command()
 async def syabette(ctx):
