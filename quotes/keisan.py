@@ -14,7 +14,7 @@ def get_keisan(bot, m, *arg):
 		]
 		return get_quotes(quotes)
 
-	formula = join(arg)
+	formula = "".join(arg)
 	miss_quotes = [
 		[100 , "フォーマットが違うんじゃないですか？数字と+-/*とカッコだけにしてくださいね"],
 		[100 , "これフォーマット違います！何か変なコマンド入れようとしたりしてないでしょうね？エッチ！！"],
