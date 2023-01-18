@@ -19,17 +19,18 @@ def get_keisan(bot, m, formula):
 		[100 , "これフォーマット違います！何か変なコマンド入れようとしたりしてないでしょうね？エッチ！！"],
 		[100 , "何か変ですよこれ"],
 		]
+"""
 	target = list(arg)
 	#引数の数がおかしい
 	if len(target) != 1:
 		return get_quotes("引数は1個にしてください、ちなみに\"でくくると半角スペースも使えますよ")
-
+"""
 	pattern = "[\d\s\(\)\+\-\*\/]+"
 
 #	pattern = "^[1-9]\d*(d|D)[1-9]\d*$"
 	#コンパイル
 	repatter = re.compile(pattern)
-	content = repatter.match(target[0])
+	content = repatter.match(formula)
 
 	#マッチしてない
 	if content is None:
