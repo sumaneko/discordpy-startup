@@ -198,7 +198,7 @@ async def rkey(ctx):
 	bot_chan.heal(9999)
 
 @bot.command()
-async def keisan(ctx, *, formula: str):
+async def keisan(ctx, formula: str):
 	#瀕死じゃないなら喋る
 	if bot_chan.dying_hp < bot_chan.get_hp():
 		try:
@@ -207,6 +207,7 @@ async def keisan(ctx, *, formula: str):
 			await ctx.send(str(e) + "らしいですよ、何か間違ってますよ")
 	else:
 		await ctx.send("電卓で、も・・・使ってればい・・・でしょ・・・")
+
 	
 @bot.command()
 async def syabette(ctx):
