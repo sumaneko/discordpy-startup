@@ -1,43 +1,72 @@
-from mylib.mymodule import get_quotes_with_damage
+from mylib.mymodule import get_quotes
 from mymodule.ryonage_bot import RyonageBot
-from quotes.omorashi import get_omorashi
-def get_dengeki(bot, m):
-	t = ""
+import re
+import random
+def get_keisan(bot, m, formula):
+	return formula
+"""
 	name = m.author.name if m.author.nick is None else m.author.nick
-	l = []
-	sikko = ""
 	#元気状態なら
-	if bot.dying_hp < bot.get_hp():
-		quotes = [			
-			[100 , "ななな、なにをバチバチさせてるんですか！？スタンガンでしょそれ！？やめて、当てな、ギャん！！！", 20],
-			[100 , "や、やめて！スタンガンなんか近づけないでよ！？やだ、やあだ！や　が、ァ゛ァア゛ア！！", 20],
-			[100 , "え、急に抱きついてきてどうし・・・ひ゛！？イギイィィア゛ア゛ァァア゛ア゛ア゛！！！！離゛し゛でえ゛え゛え゛え゛！！！！！！グゥウぅぅぁガッ、ア゛ア゛ア゛アァァアアア！！！！", 40],
-			[100 , "それすっごく痛いんですよ！？たくさんの針で貫かれたような痛みが走るんですから！だからお願いやメ゛ン゛！！！", 20],
-			[100 , "せ、せめて手とか足とかにしてください！お腹はシャレになってないんですって！やだ！やだやだや　ア゛グン゛ッ゛！！！", 20],
-			[100 , "やだっ押さえつけないで！やだやあだっ！スタンガン当て続けるのだけは　ギッッ！！痛゛いイダいイダイイ痛゛イ゛ィィイ！！！ギャア゛アア゛ァ゛ア！！！", 40],
-			[100 , "ちょちょちょ、おっぱい狙ってるでしょ！？やめてやめてお願い！おね　キ゛ヤンッッ！！！", 30],
-			[100 , "嘘でしょ！？お股にスタンガンなんて死んじゃうよぉ！！ヤダやめてやめて！ツ゛ッ゛ッッ゛！！？ア、アギア゛ア゛アッ゛ッ！？！？", 40],
-			[100 , "どうしました？何かご用で ア゛ガッ！？・・・・・・う、うぅ・・・痛ぁい・・・痛いよお・・・", 20]
-			]
-	else:
+	if bot.get_hp() <= bot.dying_hp:
 		#瀕死の時
 		quotes = [
-			[100 , "それ、当てたい、の・・・？嫌だ・・・なぁ・・・うク゛ぅうん！", 20],
-			[100 , "バチバチ嫌ぁ・・・痛い、の、グぅウ゛ン゛っ！！", 20],
-			[100 , "痛゛い゛痛゛い゛イタ゛イ！！や、やあアあ゛あ痛゛い゛ぃィィ！！", 40],
-			[100 , "あ、あ゛！？あ、ガ、カ゛アア゛ァ゛ああぁ゛ぁぁあ゛あ゛！？", 40],
-			[100 , "今、おまんこ、に・・・バチバチされた、ら・・・死んじゃ・・・ヅア゛ッッ！！ア、アア゛ァァ！！", 40],
-			[100 , f"{name}さん・・・お願い・・・バチバチするの嫌・・・なの・・・　グァああ゛あ゛！！", 20],
-			[100 , f"スタンガ・・・持った{name}さんなん、て・・・嫌、い・・・　ア゛ギャッ゛ッ゛！！", 20]
-			]
-	
-	l = get_quotes_with_damage(quotes)
-	#回避があるのでダメージで場合分け
-	if 0 < l[1]:
-		sikko = get_omorashi(bot, 20)
-	#おしっこ判定後にダメージ
-	hp = bot.damage(l[1])
-	
-	#if hp < 0:
-	
-	return l[0] + sikko
+		[100 , "今あた、ま、回ら・・・ないです・・・"],
+		[100 , "電卓で、も・・・使っててく・・・ださ・・・い"],
+		[100 , "なんで、わたし・・・が・・・そんな、の・・・答えなく、ちゃ、いけない・・・ですか・・・"],
+		]
+		return get_quotes(quotes)
+
+	miss_quotes = [
+		[100 , "これフォーマット違うんじゃないですか？数字と+-/*とカッコにしてくださいね"],
+		[100 , "これフォーマット違います！何か変なコマンド入れようとしたりしてないでしょうね？エッチ！！"],
+		[100 , "何か変ですよこれ"],
+		]
+	target = list(arg)
+	#引数の数がおかしい
+	if len(target) != 1:
+		return get_quotes(miss_quotes)
+
+	pattern = "^[1-9]\d*(d|D)[1-9]\d*$"
+	#コンパイル
+	repatter = re.compile(pattern)
+	content = repatter.match(target[0])
+
+	#マッチしてない
+	if content is None:
+		return get_quotes(miss_quotes)
+
+	t = re.split("(d|D)", content.group())
+
+	#振る回数
+	num = int(t[0])
+	if num > 10:
+		return "振る回数が多すぎです！10回までにしてください！！"
+	#賽の目
+	d_roll = int(t[2])
+	if d_roll >999999:
+		return "100万以上の数はちょっと・・・"
+	#出た目
+	result = 0
+	#出た目の羅列
+	r_text = ""
+	#合計
+	d_sum = 0
+
+	#最初の1回はカンマつかない
+	result = random.randint(1, d_roll)
+	d_sum += result
+	r_text += str(result)
+	for i in range(num-1):
+		r_text += "、"
+		result = random.randint(1, d_roll)
+		d_sum += result
+		r_text += str(result)
+
+	quotes = [
+		[100 , f"{r_text}だったので{d_sum}です！"],
+		[50 , f"{r_text}ですって。{name}さん代わりに足しといてください（{d_sum}）"],
+		[100 , f"{r_text}！合計{d_sum}です！多分！"],
+		]
+	return get_quotes(quotes)
+
+"""

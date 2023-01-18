@@ -26,6 +26,7 @@ from quotes.kubishime import get_kubishime
 from quotes.penpen import get_penpen
 from quotes.erabe import get_erabe
 from quotes.dice import get_dice
+from quotes.keisan import get_keisan
 from quotes.jobchange import get_job
 from quotes.prpr import get_prpr
 from quotes.unchiku import get_unchiku
@@ -197,9 +198,11 @@ async def jobchange(ctx):
 async def rkey(ctx):
 	bot_chan.heal(9999)
 
-"""
+
 @bot.command()
 async def keisan(ctx, formula: str):
+	await ctx.send(get_keisan(bot_chan, ctx.message, formula))
+"""
 	#瀕死じゃないなら喋る
 	if bot_chan.dying_hp < bot_chan.get_hp():
 		try:
