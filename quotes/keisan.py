@@ -22,7 +22,7 @@ def get_keisan(bot, m, *arg):
 		]
 
 #	pattern = "[0-9]+"
-	pattern = "^[\d\s\(\)\+\-\*\/]+$"
+	pattern = "^(?!.*\*\*)([\d\s\(\)\+\-\/\.\*]+)$"
 
 
 	#コンパイル
