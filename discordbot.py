@@ -201,8 +201,8 @@ async def rkey(ctx):
 
 @bot.command()
 async def keisan(ctx, *arg):
-	#await ctx.send(get_keisan(bot_chan, ctx.message, *arg))
-	await ctx.send("今は使えません・・・")
+	await ctx.send(get_keisan(bot_chan, ctx.message, *arg))
+	#await ctx.send("今は使えません・・・")
 	
 @bot.command()
 async def syabette(ctx):
