@@ -21,12 +21,14 @@ def get_hobby(m):
 		return get_quotes(quotes)
 
 	if "ネコ" in m.content or "猫" in m.content or "にゃー" in m.content or ("にゃん" in m.content and "まどにゃん" not in m.content) or "ニャー" in m.content or "ニャン" in m.content:
-		quotes = [
-		[100, "にゃー！"],
-		[100, f"{name}さんもネコちゃん好きですか？だったら嬉しいなぁ"],
-		[100, "にゃんにゃん！"]
-		]
-		return get_quotes(quotes)
+		#あまりに反応するから確率を下げる
+		if random.randint(0, 99) < 50:
+			quotes = [
+				[100, "にゃー！"],
+				[100, f"{name}さんもネコちゃん好きですか？だったら嬉しいなぁ"],
+				[100, "にゃんにゃん！"]
+			]
+			return get_quotes(quotes)
 
 	if "犬" in m.content or "イヌ" in m.content or "わんわん" in m.content or "ワンワン" in m.content:
 		quotes = [
