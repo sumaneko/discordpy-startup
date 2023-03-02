@@ -1,5 +1,6 @@
 from mylib.mymodule import get_quotes
 #BOTちゃんに呼びかける
+#[100, ""],
 def get_calling_bot(m):
 	name = m.author.name if m.author.nick is None else m.author.nick
 	t = ""
@@ -18,6 +19,9 @@ def get_calling_bot(m):
 			[100, "はい？"],
 			[100, "ひゃい"],
 			[100, "BOTちゃんですよ"],
+			[100, "呼ばれた気がする"],
+			[100, "お返事してあげませんー"],
+			[100, "はいはい"],
 			[100, f"{name}ちゃん！"],
 			[100, f"{name}さんってばいつも私の話してるー"],
 			[100, "はい"]
@@ -287,6 +291,5 @@ def get_calling_bot(m):
 		]
 		return get_quotes(quotes)
 
-	#[100, ""],
 	#BOTちゃんだけの時のreturn
 	return t
