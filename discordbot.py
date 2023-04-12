@@ -124,8 +124,7 @@ async def test(ctx):
 async def date(ctx):
 	#JSTにするには普通に9時間ずらすだけ
 	dt_now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
-	if dt_now.month == 4 and dt_now.day == 12:
-		await ctx.send("今日は" + str(dt_now.month) + "月" + str(dt_now.day) + "日です")
+	await ctx.send("今日は" + str(dt_now.month) + "月" + str(dt_now.day) + "日です")
 
 @bot.command()
 async def harapan(ctx):

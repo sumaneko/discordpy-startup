@@ -9,7 +9,6 @@ def get_calling_bot(m):
 		#先入れしておいてBOTちゃんのみの場合に対応している
 		#JSTにするには普通に9時間ずらすだけ
 		dt_now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
-		
 		quotes = [
 			[100, "呼びました？"],
 			[100, "私ですか？"],
@@ -30,7 +29,28 @@ def get_calling_bot(m):
 			[100, f"{name}ちゃん！"],
 			[100, f"{name}さんってばいつも私の話してるー"],
 			[100, "はい"]
-		]        
+		]
+		if dt_now.month == 1:
+			#quotes.append([100 , ""])
+			quotes.append([100 , str(dt_now.year) + "年も私とこのサーバーをよろしくお願いしますね！"])
+		if dt_now.month == 2 and dt_now.day == 14:
+			quotes.append([500 , f"今日はバレンタインデーですよ！{name}さんはチョコもらいましたか？ほんとにー？"])
+			if dt_now.day == 22:
+				quotes.append([500 , "今日は2月22日ですよ！にゃんにゃんにゃん！"])
+		if dt_now.month == 4:
+			quotes.append([100 , f"4月は出会いと別れの季節ですよね。{name}さんはここからいなくなったりしないでください・・・ね？"])
+			if dt_now.day == 1:
+				quotes.append([500 , "実は私BOTちゃんじゃないんですよ　　　　　あ、嘘です"])
+				quotes.append([500 , f"今日はエイプリルフールですけど{name}さんはなにか嘘つきました？"])
+		if dt_now.month == 7:
+			quotes.append([100 , "今年ももう半分終わってるんですよ、知ってました？"])
+		if dt_now.month == 8:
+			quotes.append([100 , "お返事しません暑いから"])
+		if dt_now.month == 12:
+			quotes.append([100 , "もう12月ですよ、今年が終わっちゃいますよ・・・"])
+			if dt_now.day == 24 or dt_now.day == 25:
+				quotes.append([500 , f"クリスマスなのに{name}さんもよっぽど暇なんですね！ｸｽｸｽ"])
+
 		t = get_quotes(quotes)
 		
 		#更になにか入っていたら反応
