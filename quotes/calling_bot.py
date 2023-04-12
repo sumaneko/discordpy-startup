@@ -1,3 +1,4 @@
+import datetime
 from mylib.mymodule import get_quotes
 #BOTちゃんに呼びかける
 #[100, ""],
@@ -5,6 +6,10 @@ def get_calling_bot(m):
 	name = m.author.name if m.author.nick is None else m.author.nick
 	t = ""
 	if "BOTちゃん" in m.content or "Botちゃん" in m.content or "ＢＯＴちゃん" in m.content or "botちゃん" in m.content or "ボットちゃん" in m.content:
+		#先入れしておいてBOTちゃんのみの場合に対応している
+		#JSTにするには普通に9時間ずらすだけ
+		dt_now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
+		
 		quotes = [
 			[100, "呼びました？"],
 			[100, "私ですか？"],
