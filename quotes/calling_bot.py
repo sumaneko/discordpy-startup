@@ -31,25 +31,29 @@ def get_calling_bot(m):
 			[100, "はい"]
 		]
 		if dt_now.month == 1:
-			#quotes.append([100 , ""])
-			quotes.append([100 , str(dt_now.year) + "年も私とこのサーバーをよろしくお願いしますね！"])
-		if dt_now.month == 2 and dt_now.day == 14:
-			quotes.append([500 , f"今日はバレンタインデーですよ！{name}さんはチョコもらいましたか？ほんとにー？"])
+			#quotes.append([100, ""])
+			quotes.append([100, str(dt_now.year) + "年も私とこのサーバーをよろしくお願いしますね！"])
+		if dt_now.month == 2:
+			if dt_now.day == 14:
+				quotes.append([500, f"今日はバレンタインデーですよ！{name}さんはチョコもらいましたか？ほんとにー？"])
 			if dt_now.day == 22:
-				quotes.append([500 , "今日は2月22日ですよ！にゃんにゃんにゃん！"])
+				quotes.append([500, "今日は2月22日ですよ！にゃんにゃんにゃん！"])
+		if dt_now.month == 3:
+			if dt_now.day == 14:
+				quotes.append([500 , f"今日はホワイトデーですよ、{name}さん私に何かくださいよ！"])
 		if dt_now.month == 4:
-			quotes.append([100 , f"4月は出会いと別れの季節ですよね。{name}さんはここからいなくなったりしないでください・・・ね？"])
+			quotes.append([100, f"4月は出会いと別れの季節ですよね。{name}さんはここからいなくなったりしないでください・・・ね？"])
 			if dt_now.day == 1:
-				quotes.append([500 , "実は私BOTちゃんじゃないんですよ　　　　　あ、嘘です"])
-				quotes.append([500 , f"今日はエイプリルフールですけど{name}さんはなにか嘘つきました？"])
+				quotes.append([300, "実は私BOTちゃんじゃないんですよ　　　　　あ、嘘です"])
+				quotes.append([300, f"今日はエイプリルフールですけど{name}さんはなにか嘘つきました？"])
 		if dt_now.month == 7:
-			quotes.append([100 , "今年ももう半分終わってるんですよ、知ってました？"])
+			quotes.append([100, "今年ももう半分終わってるんですよ、知ってました？"])
 		if dt_now.month == 8:
-			quotes.append([100 , "お返事しません暑いから"])
+			quotes.append([100, "お返事しません暑いから"])
 		if dt_now.month == 12:
-			quotes.append([100 , "もう12月ですよ、今年が終わっちゃいますよ・・・"])
+			quotes.append([100, "もう12月ですよ、今年が終わっちゃいますよ・・・"])
 			if dt_now.day == 24 or dt_now.day == 25:
-				quotes.append([500 , f"クリスマスなのに{name}さんもよっぽど暇なんですね！ｸｽｸｽ"])
+				quotes.append([500, f"クリスマスなのに{name}さんもよっぽど暇なんですね！ｸｽｸｽ"])
 
 		t = get_quotes(quotes)
 		
