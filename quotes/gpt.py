@@ -4,8 +4,8 @@ from mymodule.ryonage_bot import RyonageBot
 #[100 , ""],
 def get_gpt(bot, m):
 	name = m.author.name if m.author.nick is None else m.author.nick
-	#dt_now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
-
+	dt_now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
+"""
 	#元気状態なら
 	if bot.dying_hp < bot.get_hp():
 		quotes = [
@@ -26,3 +26,5 @@ def get_gpt(bot, m):
 			[100 , "ふ、不適切・・・です・・・。"]
 		]
 	return get_quotes(quotes)
+"""
+	return "テスト"
