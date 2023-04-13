@@ -30,6 +30,7 @@ from quotes.keisan import get_keisan
 from quotes.jobchange import get_job
 from quotes.prpr import get_prpr
 from quotes.unchiku import get_unchiku
+from quotes.gpt import get_gpt
 
 #デフォのintentではmemberにアクセスできないので、ここでTrueに（app画面からのserver members intent設定も必要）
 inte = discord.Intents.default()
@@ -193,6 +194,10 @@ async def lucky(ctx):
 @bot.command()
 async def jobchange(ctx):
 	await ctx.send(get_job(bot_chan, ctx.message))
+
+@bot.command()
+async def gpt(ctx):
+	await ctx.send(get_gpt(bot_chan, ctx.message))
 	
 @bot.command()
 async def rkey(ctx):
