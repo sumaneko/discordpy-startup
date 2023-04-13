@@ -1,7 +1,7 @@
 import datetime
 from mylib.mymodule import get_quotes
 #[100 , ""],
-def get_gpt(m):
+def get_gpt(bot, m):
 	name = m.author.name if m.author.nick is None else m.author.nick
 	dt_now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
 
