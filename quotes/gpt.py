@@ -1,5 +1,6 @@
 import datetime
 from mylib.mymodule import get_quotes
+from mymodule.ryonage_bot import RyonageBot
 #[100 , ""],
 def get_gpt(bot, m):
 	name = m.author.name if m.author.nick is None else m.author.nick
