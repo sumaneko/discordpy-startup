@@ -16,6 +16,7 @@ from quotes.dengeki import get_dengeki
 from quotes.yakigote import get_yakigote
 from quotes.nadenade import get_nadenade
 from quotes.morase import get_morase
+from quotes.morasuna import get_morasuna
 from quotes.omikuji import get_omikuji
 from quotes.luckyitem import get_lucky
 from quotes.playchu import get_playchu
@@ -182,6 +183,10 @@ async def prpr(ctx):
 async def morase(ctx):
 	await ctx.send(get_morase(bot_chan, ctx.message))
 	
+@bot.command()
+async def morasuna(ctx):
+	await ctx.send(get_morasuna(bot_chan, ctx.message))
+
 @bot.command()
 async def omikuji(ctx):
 	await ctx.send(get_omikuji(bot_chan, ctx.message))
