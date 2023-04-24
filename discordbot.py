@@ -17,6 +17,7 @@ from quotes.yakigote import get_yakigote
 from quotes.nadenade import get_nadenade
 from quotes.morase import get_morase
 from quotes.morasuna import get_morasuna
+from quotes.omanko import get_omanko
 from quotes.omikuji import get_omikuji
 from quotes.luckyitem import get_lucky
 from quotes.playchu import get_playchu
@@ -72,12 +73,6 @@ async def ping(ctx):
 	await ctx.send("_chinpong_")
 	#botはカスタムステータス使えないらしい
 	#await bot.change_presence(activity=discord.Activity(type=discord.ActivityType.custom, state="NAMEOFMYACTIVITY"))
-	
-@bot.command()
-async def omanko(ctx):
-	#瀕死じゃないなら喋る
-	if bot_chan.dying_hp < bot_chan.get_hp():
-		await ctx.send("おまんこ！")
 
 @bot.command()
 async def syabutte(ctx):
@@ -188,6 +183,10 @@ async def morasuna(ctx):
 	await ctx.send(get_morasuna(bot_chan, ctx.message))
 
 @bot.command()
+async def omanko(ctx):
+	await ctx.send(get_omanko(bot_chan, ctx.message))
+
+@bot.command()
 async def omikuji(ctx):
 	await ctx.send(get_omikuji(bot_chan, ctx.message))
 	
@@ -206,7 +205,6 @@ async def gpt(ctx):
 @bot.command()
 async def rkey(ctx):
 	bot_chan.heal(9999)
-
 
 @bot.command()
 async def keisan(ctx, *arg):
