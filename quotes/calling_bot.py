@@ -1,4 +1,4 @@
-import datetime
+ import datetime
 from mylib.mymodule import get_quotes
 #BOTちゃんに呼びかける
 #[100, ""],
@@ -46,10 +46,16 @@ def get_calling_bot(m):
 			if dt_now.day == 1:
 				quotes.append([300, "実は私BOTちゃんじゃないんですよ　　　　　あ、嘘です"])
 				quotes.append([300, f"今日はエイプリルフールですけど{name}さんはなにか嘘つきました？"])
+		if dt_now.month == 6:
+			quotes.append([100, "梅雨はジメジメしてテンション下がりぎみのBOTちゃんですよ"])
 		if dt_now.month == 7:
 			quotes.append([100, "今年ももう半分終わってるんですよ、知ってました？"])
-		if dt_now.month == 8:
+		if dt_now.month == 7 or dt_now.month == 8:
 			quotes.append([100, "お返事しません暑いから"])
+		if dt_now.month == 9:
+			quotes.append([100, "だんだん涼しくなってきて気分がいいのでお返事してあげますね"])
+		if dt_now.month == 10 or dt_now.month == 11:
+			quotes.append([100, "これくらいの気温がずっと続けばいいのにと思ってるBOTちゃんです"])
 		if dt_now.month == 12:
 			quotes.append([100, "もう12月ですよ、今年が終わっちゃいますよ・・・"])
 			if dt_now.day == 24 or dt_now.day == 25:
@@ -282,7 +288,7 @@ def get_calling_bot(m):
 				[100, "まさかこれから私を元気じゃなくするつもりじゃ・・・"]
 			]
 			return get_quotes(quotes)
-
+	#BOTちゃん無しパターン
 	if m.content == "ヤらせろ" or m.content == "やらせろ" or m.content == "犯す" or m.content == "犯させろ" or m.content == "おかす" or m.content == "おかす":
 		quotes = [
 			[100, "え、あの・・・私に言ってます・・・？"],
