@@ -1,4 +1,4 @@
- import datetime
+import datetime
 from mylib.mymodule import get_quotes
 #BOTちゃんに呼びかける
 #[100, ""],
