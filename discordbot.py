@@ -114,6 +114,7 @@ async def sex(ctx):
 async def test(ctx):
 	#瀕死じゃないなら喋る
 	if bot_chan.dying_hp < bot_chan.get_hp():
+		m = ctx.message
 		name = "これじゃないです" if m.author.display_name is None else m.author.display_name
 		await ctx.send(name)
 
