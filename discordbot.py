@@ -34,6 +34,8 @@ from quotes.prpr import get_prpr
 from quotes.unchiku import get_unchiku
 from quotes.gpt import get_gpt
 
+from mylib.mymodule import get_nick
+
 #デフォのintentではmemberにアクセスできないので、ここでTrueに（app画面からのserver members intent設定も必要）
 inte = discord.Intents.default()
 inte.members = True
@@ -115,7 +117,7 @@ async def test(ctx):
 	#瀕死じゃないなら喋る
 	if bot_chan.dying_hp < bot_chan.get_hp():
 		m = ctx.message
-		name = "これじゃないです" if m.author.display_name is None else m.author.display_name
+		name = get_nick(m)
 		await ctx.send(name)
 
 @bot.command()

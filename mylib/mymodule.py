@@ -32,3 +32,7 @@ def get_quotes_with_damage(q_list):
         total_weight -= i[0]
     l = [target[1], target[2]]
     return l
+
+def get_nick(m):
+    name = m.author.name if m.author.display_name is None else m.author.display_name
+    return name
