@@ -2,8 +2,10 @@ from mylib.mymodule import get_quotes
 from mymodule.ryonage_bot import RyonageBot
 import re
 import random
+from mylib.mymodule import get_nick
+
 def get_dice(bot, m, *arg):
-	name = m.author.name if m.author.nick is None else m.author.nick
+	name = get_nick(m)
 	#元気状態なら
 	if bot.get_hp() <= bot.dying_hp:
 		#瀕死の時

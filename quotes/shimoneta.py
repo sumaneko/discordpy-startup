@@ -1,9 +1,11 @@
 import random
 from mylib.mymodule import get_quotes
+from mylib.mymodule import get_nick
+
 #下ネタ
 def get_shimoneta(m):
 	t = ""
-	name = m.author.name if m.author.nick is None else m.author.nick
+	name = get_nick(m)
 	#コピペ用[100, ""],
 	if "リョナラー" in m.content:
 		quotes = [

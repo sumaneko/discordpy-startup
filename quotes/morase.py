@@ -1,9 +1,11 @@
 from mylib.mymodule import get_quotes
 from mymodule.ryonage_bot import RyonageBot
+from mylib.mymodule import get_nick
+
 #[100 , ""],
 def get_morase(bot, m):
 	t = ""
-	name = m.author.name if m.author.nick is None else m.author.nick
+	name = get_nick(m)
 	#元気状態なら
 	if bot.dying_hp < bot.get_hp():
 		quotes = [

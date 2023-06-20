@@ -1,10 +1,11 @@
-
 from mylib.mymodule import get_quotes
 from mymodule.ryonage_bot import RyonageBot
 import random
+from mylib.mymodule import get_nick
+
 def get_omikuji(bot, m):
 	t = ""
-	name = m.author.name if m.author.nick is None else m.author.nick
+	name = get_nick(m)
 	#元気状態なら
 	if bot.dying_hp < bot.get_hp():
 		pre = "おみくじはーっと・・・・・・"

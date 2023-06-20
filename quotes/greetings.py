@@ -1,8 +1,10 @@
 from mylib.mymodule import get_quotes
+from mylib.mymodule import get_nick
+
 #挨拶
 def get_greetings(m):
 	t = ""
-	name = m.author.name if m.author.nick is None else m.author.nick
+	name = get_nick(m)
 	if "おやす" in m.content:
 		quotes = [
 			[100, "おやすみなさい～"],

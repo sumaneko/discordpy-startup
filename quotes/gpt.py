@@ -1,9 +1,10 @@
 import datetime
 from mylib.mymodule import get_quotes
 from mymodule.ryonage_bot import RyonageBot
+from mylib.mymodule import get_nick
 #[100 , ""],
 def get_gpt(bot, m):
-	name = m.author.name if m.author.nick is None else m.author.nick
+	name = get_nick(m)
 	dt_now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
 
 	#元気状態なら

@@ -1,9 +1,11 @@
 from mylib.mymodule import get_quotes
 from mymodule.ryonage_bot import RyonageBot
+from mylib.mymodule import get_nick
+
 def get_erabe(bot, m, *args):
 	pre = ""
 	suf = ""
-	name = m.author.name if m.author.nick is None else m.author.nick
+	name = get_nick(m)
 
 	if  bot.get_hp() <= bot.dying_hp:
 		#瀕死の時

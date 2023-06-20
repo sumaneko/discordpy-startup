@@ -1,10 +1,12 @@
 from mylib.mymodule import get_quotes_with_damage
 from mymodule.ryonage_bot import RyonageBot
 from quotes.omorashi import get_omorashi
+from mylib.mymodule import get_nick
+
 def get_yakigote(bot, m):
 	t = ""
 	l = []
-	name = m.author.name if m.author.nick is None else m.author.nick
+	name = get_nick(m)
 	sikko = ""
 	#元気状態なら
 	if bot.dying_hp < bot.get_hp():

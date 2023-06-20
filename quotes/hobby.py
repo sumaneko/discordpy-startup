@@ -1,10 +1,12 @@
 import random
 from mylib.mymodule import get_quotes
+from mylib.mymodule import get_nick
+
 #趣味
 #コピペ用[100, ""],
 def get_hobby(m):
 	t = ""
-	name = m.author.name if m.author.nick is None else m.author.nick
+	name = get_nick(m)
 
 	if m.content.endswith("っふん") and "ぼっふん" not in m.content:
 		quotes = [

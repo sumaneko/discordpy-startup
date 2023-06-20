@@ -1,8 +1,10 @@
 from mylib.mymodule import get_quotes_with_damage
 from mymodule.ryonage_bot import RyonageBot
+from mylib.mymodule import get_nick
+
 def get_penpen(bot, m):
 	t = ""
-	name = m.author.name if m.author.nick is None else m.author.nick
+	name = get_nick(m)
 	l = []
 	sikko = ""
 	#元気状態なら

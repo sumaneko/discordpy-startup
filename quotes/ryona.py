@@ -1,8 +1,10 @@
 from mylib.mymodule import get_quotes
+from mylib.mymodule import get_nick
+
 #リョナ
 def get_ryona(m):
 	t = ""
-	name = m.author.name if m.author.nick is None else m.author.nick
+	name = get_nick(m)
 
 	if "腹パン" in m.content:
 		quotes = [
