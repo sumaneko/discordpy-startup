@@ -1,9 +1,10 @@
 import datetime
 from mylib.mymodule import get_quotes
+from mylib.mymodule import get_nick
 #BOTちゃんに呼びかける
 #[100, ""],
 def get_calling_bot(m):
-	name = m.author.name if m.author.nick is None else m.author.nick
+	name = get_nick(m)
 	t = ""
 	if "BOTちゃん" in m.content or "Botちゃん" in m.content or "ＢＯＴちゃん" in m.content or "botちゃん" in m.content or "ボットちゃん" in m.content:
 		#先入れしておいてBOTちゃんのみの場合に対応している
@@ -26,7 +27,7 @@ def get_calling_bot(m):
 			[100, "呼ばれた気がする"],
 			[100, "お返事してあげませんー"],
 			[100, "はいはい"],
-			[100, f"{name}ちゃん！"],
+			[10000, f"{name}ちゃん！"],
 			[100, f"{name}さんってばいつも私の話してるー"],
 			[100, "はい"]
 		]
