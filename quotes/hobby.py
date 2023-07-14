@@ -85,6 +85,7 @@ def get_hobby(m):
 	if "暑い" in m.content or "暑くない？" in m.content or "あつい" in m.content or "あつくない？" in m.content:
 		quotes = [
 			[100, "暑いのきらーい"],
+			[100, "暑いとおっぱいの下のとこが蒸れちゃって大変なんですよね・・・"],
 			[100, "かき氷でも食べますか？"],
 			[100, "暑い時はエアコンに限りますよ！"]
 		]
