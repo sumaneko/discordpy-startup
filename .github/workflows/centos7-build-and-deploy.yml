@@ -7,11 +7,9 @@ on:
 
 jobs:
   build:
-    runs-on: centos-7
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Pull
-      - run: git pull
       - uses: actions/checkout@v2
       - name: Install Python
         run: yum install python3 python3-pip
