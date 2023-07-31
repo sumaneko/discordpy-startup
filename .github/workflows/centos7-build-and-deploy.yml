@@ -7,15 +7,11 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: centos-7
 
     steps:
       - uses: actions/checkout@v2
       - name: Install Python
         run: yum install python3 python3-pip
-      - name: Install requirements
-        run: pip3 install -r requirements.txt
-      - name: Build Python project
-        run: python3 discordbot.py build
-      - name: Deploy Python project
-        run: python3 discordbot.py deploy
+      - name: Run and nohup discordbot
+        run: nohup python3.9 /var/git/discordpy-startup/discordbot.py &
