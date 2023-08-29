@@ -114,8 +114,13 @@ async def sex(ctx):
 async def test(ctx):
 	#瀕死じゃないなら喋る
 	if bot_chan.dying_hp < bot_chan.get_hp():
-		await ctx.send("github actionsのテスト")
-		#await ctx.send("今はテストはしてないです")
+		await ctx.send("今はテストはしてないです")
+
+@bot.command()
+async def jikan(ctx):
+	#瀕死じゃないなら喋る
+	if bot_chan.dying_hp < bot_chan.get_hp():
+		await ctx.send("日本時間で" + datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))) + "です")
 
 @bot.command()
 async def harapan(ctx):
