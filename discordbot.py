@@ -119,8 +119,9 @@ async def test(ctx):
 @bot.command()
 async def jikan(ctx):
 	#瀕死じゃないなら喋る
+	dt_now = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9)))
 	if bot_chan.dying_hp < bot_chan.get_hp():
-		await ctx.send("日本時間で" + datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=9))) + "です")
+		await ctx.send(f"日本時間で{dt_now}です")
 
 @bot.command()
 async def harapan(ctx):
