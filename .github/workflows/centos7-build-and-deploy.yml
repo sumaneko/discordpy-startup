@@ -10,8 +10,12 @@ jobs:
     runs-on: centos-7
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Install Python
-        run: yum install python3 python3-pip
-      - name: Run and nohup discordbot
-        run: nohup python3.9 /var/git/discordpy-startup/discordbot.py &
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Write Test File
+        run: echo "This is a test file." > test.txt
+      #- name: Install Python
+      #  run: yum install python3 python3-pip
+      #- name: Run and nohup discordbot
+      #  run: nohup python3.9 /var/git/discordpy-startup/discordbot.py &
