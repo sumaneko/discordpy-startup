@@ -34,6 +34,7 @@ def get_calling_bot(m):
 		if dt_now.month == 1:
 			#quotes.append([100, ""])
 			quotes.append([100, str(dt_now.year) + "年も私とこのサーバーをよろしくお願いしますね！"])
+			quotes.append([100, "このサーバーのお誕生日は2021年1月11日なんですよ、まさか忘れてなんかいませんよね？"])
 		if dt_now.month == 2:
 			if dt_now.day == 14:
 				quotes.append([500, f"今日はバレンタインデーですよ！{name}さんはチョコもらいましたか？ほんとにー？"])
@@ -59,6 +60,7 @@ def get_calling_bot(m):
 			quotes.append([100, "これくらいの気温がずっと続けばいいのにと思ってるBOTちゃんです"])
 		if dt_now.month == 12:
 			quotes.append([100, "もう12月ですよ、今年が終わっちゃいますよ・・・"])
+			quotes.append([100, "本格的に寒くなってきたのでお返事したくないです"])
 			if dt_now.day == 24 or dt_now.day == 25:
 				quotes.append([500, f"クリスマスなのに{name}さんもよっぽど暇なんですね！ｸｽｸｽ"])
 
