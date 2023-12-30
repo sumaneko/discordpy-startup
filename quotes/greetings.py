@@ -72,7 +72,7 @@ def get_greetings(m):
 		else:
 			quotes = [
 				[100, "はいはいあけおめあけおめ"],
-				[100, f"まだ{dt_now.month}月ですよ、からかってます？"],
+				[100, "まだ" + str(dt_now.month) + "月ですよ、からかってます？"],
 				[100, "あけませんよ！"]
 			]
 			return get_quotes(quotes)
