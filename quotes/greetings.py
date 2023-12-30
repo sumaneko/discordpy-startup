@@ -75,6 +75,6 @@ def get_greetings(m):
 				[100, "まだ" + str(dt_now.month) + "月ですよ、からかってます？"],
 				[100, "あけませんよ！"]
 			]
-			return get_quotes(quotes)
+		return get_quotes(quotes)
 
 	return t
