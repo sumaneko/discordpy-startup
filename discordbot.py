@@ -284,7 +284,7 @@ async def on_message(message):
 
 				if bot.user in message.mentions:
 					#メンション（リプ）された時のやつ
-					await reply(f"何かご用ですか？")
+					await message.reply(f"何かご用ですか？")
 				else:
 					#セリフの文字列取得["セリフ", flag]で返る　BOTちゃん反応のために仕方なく順序をずらす
 					msg = get_bot_reaction(message)
