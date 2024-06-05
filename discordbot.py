@@ -255,7 +255,7 @@ async def unchiku(ctx):
 #発言に反応する
 @bot.event
 async def on_message(message):
-	#プレイ中を処理する
+	#プレイ中（生きてる時の◯◯をプレイ中ってやつ）を処理する
 	global playing_turn
 	#健康ならプレイ中
 	if bot_chan.dying_hp < bot_chan.get_hp():
@@ -282,16 +282,20 @@ async def on_message(message):
 				global prev_time
 				t = prev_time
 
-				#セリフの文字列取得["セリフ", flag]で返る　BOTちゃん反応のために仕方なく順序をずらす
-				msg = get_bot_reaction(message)
-				
-				#ct経ってないかつflagがTrue（通常の反応）なら落とす
-				if datetime.datetime.now() < t + datetime.timedelta(seconds=ct) and msg[1]:
-					return
-				
-				if msg[0] != "":
-					await message.channel.send(msg[0])
-					prev_time = datetime.datetime.now()
+				if bot.user in message.mention:
+					#メンション（リプ）された時のやつ
+					await reply(f"何かご用でも？")
+				else:
+					#セリフの文字列取得["セリフ", flag]で返る　BOTちゃん反応のために仕方なく順序をずらす
+					msg = get_bot_reaction(message)
+					
+					#ct経ってないかつflagがTrue（通常の反応）なら落とす
+					if datetime.datetime.now() < t + datetime.timedelta(seconds=ct) and msg[1]:
+						return
+					
+					if msg[0] != "":
+						await message.channel.send(msg[0])
+						prev_time = datetime.datetime.now()
 	await bot.process_commands(message)
 
 
