@@ -282,7 +282,7 @@ async def on_message(message):
 				global prev_time
 				t = prev_time
 
-				if bot.user in message.mention:
+				if bot.user in message.mentions:
 					#メンション（リプ）された時のやつ
 					#await reply(f"何かご用でも？")
 					await message.channel.send("呼びました？")
